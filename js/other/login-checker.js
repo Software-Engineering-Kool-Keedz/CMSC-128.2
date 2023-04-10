@@ -1,0 +1,1 @@
+// checks if the user is logged in, if not, user is redirected to /login
