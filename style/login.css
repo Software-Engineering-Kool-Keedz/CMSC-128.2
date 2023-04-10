@@ -1,0 +1,95 @@
+body {
+    background-image: url('../img/login-bg.png');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position-y: 70px;
+}
+
+/* NAVBAR */
+.navbar {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+    background-color: transparent;
+}
+
+.navbar-brand {
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.msg {
+    font-size: 15px;
+}
+
+.sign-up {
+    color: black;
+}
+/* END NAVBAR */
+
+
+/* Body */
+.container {
+    margin-top: 80px;
+    margin-left: 120px;
+}
+
+.tagline {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+#tag {
+    padding-left: 100px;
+}
+
+
+.sign-in-form {
+    margin-top: 35px;
+}
+
+#sign-in-label {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.form-control {
+    width: 300px;
+    background-color: #ECECEC;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #BDBDBD;
+    padding-left: 30px;
+}
+
+#username-input {
+    margin-top: 30px;
+    background-image: url("../img/PersonFill.png");
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 10px;
+}
+
+#password-input {
+    margin-top: 20px;
+    background-image: url("../img/LockFill.png");
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 10px;
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.btn {
+    margin-top: 30px;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: black;
+}
