@@ -71,6 +71,14 @@ body {
     color: #BDBDBD;
 }
   
+#email-input {
+    margin-top: 30px;
+    background-image: url("../img/mail-fill.png");
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 10px;
+}
+
 #username-input {
     margin-top: 30px;
     background-image: url("../img/PersonFill.png");
