@@ -60,6 +60,7 @@ body {
 
 .form-control {
     width: 300px;
+    height: 40px;
     background-color: #ECECEC;
     border: none;
     border-radius: 10px;
