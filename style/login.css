@@ -1,5 +1,5 @@
 body {
-    background-image: url('../img/login-bg.png');
+    background-image: url('../img/abstract-waves.png');
     background-repeat: no-repeat;
     background-size: 70%;
     background-position-y: 70px;
@@ -64,13 +64,13 @@ body {
     background-color: #ECECEC;
     border: none;
     border-radius: 10px;
+    padding-left: 2.375rem; /*added for input*/
 }
 
 .form-control::-webkit-input-placeholder {
     color: #BDBDBD;
-    padding-left: 30px;
 }
-
+  
 #username-input {
     margin-top: 30px;
     background-image: url("../img/PersonFill.png");
@@ -104,3 +104,4 @@ body {
     border-radius: 20px;
     background-color: black;
 }
+
