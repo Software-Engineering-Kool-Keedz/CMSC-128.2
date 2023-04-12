@@ -1,0 +1,114 @@
+body {
+    background-image: url('../img/home-bg.png');
+    background-repeat: no-repeat;
+    background-size: 62%;
+    background-position: right;
+    background-position-y: 150px;
+}
+
+/* NAVBAR */
+.navbar {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+    background-color: transparent;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-logo {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.nav-item {
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: black;
+    font-size: 15px;
+}
+
+#logout {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    color: black;
+    width: 100px;
+    height: 40px;
+}
+
+#logout:hover {
+    background-color: black;
+    color: white;
+}
+
+/* END NAVBAR */
+
+
+/* Body */
+.container {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    margin-left: -1%;
+}
+
+#descrip {
+    font-size: 15px;
+}
+
+#second-container {
+    margin-top: 310px;
+    margin-left: -12%;
+}
+
+#res-btn1 {
+    border-color: black;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    width: 160px;
+}
+
+#res-btn2 {
+    border-color: black;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    width: 40px;
+    font-weight: bolder;
+}
+
+#res-btn1:hover, #res-btn2:hover{
+    background-color: white;
+    color: black;
+}
+
+#res-summary {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-right: 18%;
+    margin-left: 17%;
+    margin-top: 5%;
+    text-align: center;
+    padding: 50px;
+}
+
+#illustration {
+    width: 50px;
+    height: 150px;
+    background-color: pink;
+    border-radius: 10px;
+}
+
+#res {
+    margin-top: 20px;
+}

@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
-    <link rel="stylesheet" href="../style/login.css"> <!-- TO CHANGE -->
+    <link rel="stylesheet" href="../style/home.css"> <!-- TO CHANGE -->
 
 </head>
 <body>
@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Dashboard</a> <!-- To insert link here-->
+                        <a class="nav-link" href="#">Dashboard</a> <!-- To insert link here-->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Form</a> <!-- To insert link here-->
@@ -36,10 +36,10 @@
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <span class="msg">Logged in as USERNAME</span>
+                        <span class="msg">Logged in as <b>USERNAME</b></span>
                     </li>
                     <li class="nav-item">
-                        <button type="submit" class="btn btn-primary">Logout</button> <!-- BUTTON NOT PROPERLY PLACED -->
+                        <button type="submit" class="btn btn-primary" id="logout">Logout</button> <!-- BUTTON NOT PROPERLY PLACED -->
                     </li>
                 </ul>
             </div>
@@ -50,26 +50,47 @@
     <!-- HOMEPAGE CONTENTS -->
     <div class="container text-center">
         <div class="row">
-          <div class="col" id="tag">
-            <p class="tagline">Insert tagline here</p>
+          <div class="col" id="descrip">
+            background info about the study + info about the website
+
           </div>
-          <div class="col" id="sign-in">
-            <form class="sign-in-form">
-                <div class="row justify-content-center">
-                  <label class="form-label" id="sign-in-label">Sign in to Website</label>                         
-                  <input type="email" class="form-control" id="username-input" aria-describedby="emailHelp" placeholder="Username">
-                </div>
-                <div class="row justify-content-center">
-                  <input type="password" class="form-control" id="password-input" placeholder="Password" required>
-                </div>
-                <div class="row justify-content-center">
-                  <a href="" class="forgot-password">Forgot password?</a>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-              </form>
+          <div class="col">
+            <!-- right div -->
+          </div>
+    </div>
+
+    <div class="container text-center" id="second-container">
+        <div class="row">
+          <div class="col" id="tag">
+            <button class="btn btn-primary" id="res-btn1">Result Summary</button>
+            <button class="btn btn-primary" id="res-btn2">↓</button>
+
+          </div>
+          <div class="col">
+            <!-- right div -->
           </div>
     </div>
     
+    <div class="container text-center" id="res-summary">
+        <div class="row">
+            <div class="col">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                deserunt mollit anim id est laborum."
+            </div>
+            <div class="col" id="illustration">
+              <!-- right div -->
+            </div>
+            <div id="res">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                deserunt mollit anim id est laborum."
+            </div>
+    </div>
 
 </body>
 </html>
