@@ -1,9 +1,76 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Page</title>
-    </head>
-    <body>
-        <p>Hi</p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="../style/login.css">
+
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="" class="navbar-brand"> <img src="../img/logo.png" alt=""> <span class="nav-logo">WEBSITE</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Dashboard</a> <!-- To insert link here-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Form</a> <!-- To insert link here-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Result</a> <!-- To insert link here-->
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <span class="msg">Logged in as USERNAME</span>
+                    </li>
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-primary">Logout</button> <!-- BUTTON NOT PROPERLY PLACED -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- HOMEPAGE CONTENTS -->
+    <div class="container text-center">
+        <div class="row">
+          <div class="col" id="tag">
+            <p class="tagline">Insert tagline here</p>
+          </div>
+          <div class="col" id="sign-in">
+            <form class="sign-in-form">
+                <div class="row justify-content-center">
+                  <label class="form-label" id="sign-in-label">Sign in to Website</label>                         
+                  <input type="email" class="form-control" id="username-input" aria-describedby="emailHelp" placeholder="Username">
+                </div>
+                <div class="row justify-content-center">
+                  <input type="password" class="form-control" id="password-input" placeholder="Password" required>
+                </div>
+                <div class="row justify-content-center">
+                  <a href="" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </form>
+          </div>
+    </div>
+    
+
+</body>
 </html>
