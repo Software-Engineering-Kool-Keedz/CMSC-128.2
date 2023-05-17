@@ -49,6 +49,13 @@ body {
     padding-left: 100px;
 }
 
+.tagline{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
 
 .sign-in-form {
     margin-top: 35px;
