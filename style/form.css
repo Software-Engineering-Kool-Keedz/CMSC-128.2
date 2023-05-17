@@ -1,0 +1,71 @@
+/* NAVBAR */
+.navbar {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+    background-color: transparent;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-logo {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.nav-item {
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: black;
+    font-size: 15px;
+}
+
+#logout {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    color: black;
+    width: 100px;
+    height: 40px;
+}
+
+#logout:hover {
+    background-color: black;
+    color: white;
+}
+
+/* END NAVBAR */
+
+
+/* BODY */
+
+.sections {
+    margin-top: 50px;
+}
+
+.label {
+    background-color: black;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+#section-number {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#section-title {
+    padding-left: 15px;
+    padding-right: 75%;
+}
