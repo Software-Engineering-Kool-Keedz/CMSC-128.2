@@ -4,7 +4,6 @@ cmd-lines.txt
 /py/dataset.csv
 /py/dataset-nodup.csv
 /py/lr-model.py
-/py/
 /venv
 .env
 idea.txt
