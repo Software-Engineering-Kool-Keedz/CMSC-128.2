@@ -63,14 +63,516 @@
         </div>
 
         <div class="input">
-            <div class="col-md-3">
-                <label for="" class="">Email</label>
-                <select id="inputState" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                </select>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="AGERNG" class="">Age (AGERNG)</label>
+                    <select id="AGERNG" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+        
+                    <label for="EDU" class="">Educational Attainment</label>
+                    <select id="EDU" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+        
+                <div class="col-md-4">
+                    <label for="GENDER" class="">Gender</label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="Gender" id="gender-male" value="male" class="form-check-input" onclick="select_exposure()">
+                                    <label for="gender-male" class="form-check-label">Male</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="Gender" id="gender-female" value="female" class="form-check-input" onclick="select_exposure()">
+                                    <label for="gender-female" class="form-check-label">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <label for="PROF" class="">Profession</label>
+                    <select id="PROF" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+        
+                <div class="col-md-4">
+                    <label for="MARSTS" class="">Marital Status</label>
+                    <select id="MARSTS" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+        
+                    <label for="RESDPL" class="">Type of Residence</label>
+                    <select id="RESDPL" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
             </div>
         </div>
+        
+        <div class="sections">
+            <span class="label" id="section-number">02</span> <span class="label" id="section-title">PHYSICAL HEALTH</span>
+        </div>
+
+        <div class="input">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="PHEX" class="">Physical Exercise (PHEX)</label>
+                    <select id="PHEX" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+            
+                    <label for="AVGSLP" class="">Average Sleep Hours (AVGSLP)</label>
+                    <select id="AVGSLP" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+
+                    <label for="PREMED" class="">Taking Prescribed Med (PREMED)</label>
+                        <div class="radio-options">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="Premed" id="premed-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                        <label for="premed-yes" class="form-check-label">Yes</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="Premed" id="premed-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                        <label for="premed-no" class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            
+                <div class="col-md-4">
+                    <label for="ILLNESS" class="">With Illness</label>
+                        <div class="radio-options">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="Illness" id="illness-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                        <label for="illness-yes" class="form-check-label">Yes</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="Illness" id="illness-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                        <label for="illness-no" class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    <label for="SMOKE" class="">Smoker</label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="Smoker" id="smoker-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="smoker-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="Smoker" id="smoker-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="smoker-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="INSOM" class="">Has Insomnia</label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="Insomnia" id="insomnia-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="insomnia-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="Insomnia" id="insomnia-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="insomnia-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <label for="DRINK" class="">Alcohol Drinker</label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="Drinker" id="drinker-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="drinker-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="Drinker" id="drinker-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="drinker-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sections">
+            <span class="label" id="section-number">03</span> <span class="label" id="section-title">SOCIAL AND RELATIONSHIP CIRCUMSTANCES</span>
+        </div>
+
+        <div class="input">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="LIVWITH" class="">Lives with Family or not (LIVWTH)</label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="LIVWITH" id="livwith-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="livwith-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="LIVWITH" id="livwith-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="livwith-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <label for="THREAT" class="">Faced threat (THREAT) </label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="THREAT" id="threat-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="threat-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="THREAT" id="threat-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="threat-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label for="CHEAT" class="">Felt Cheated (CHEAT) </label>
+                        <div class="radio-options">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="CHEAT" id="cheat-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                        <label for="cheat-yes" class="form-check-label">Yes</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="CHEAT" id="cheat-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                        <label for="cheat-no" class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            
+                <div class="col-md-4">
+                    <label for="CONFLICT" class="">In Conflict with Family or Friends (CONFLICT) </label>
+                        <div class="radio-options">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="CONFLICT" id="conflict-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                        <label for="conflict-yes" class="form-check-label">Yes</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="CONFLICT" id="conflict-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                        <label for="conflict-no" class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    <label for="LOST" class="">Lost Someone (LOST) </label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="LOST" id="lost-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="lost-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="LOST" id="lost-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="lost-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label for="ABUSED" class="">Felt Abused (ABUSED) </label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="ABUSED" id="abused-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="abused-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="ABUSED" id="abused-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="abused-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="ENVSAT" class="">Satisfied with Environment (ENVSAT) </label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="ENVSAT" id="envsat-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="envsat-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="ENVSAT" id="envsat-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="envsat-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <label for="TSSN" class="">Average hours in social network</label>
+                    <select id="TSSN" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="sections">
+            <span class="label" id="section-number">04</span> <span class="label" id="section-title">FINANCIAL CIRCUMSTANCE</span>
+        </div>
+
+        <div class="input">
+            <div class="row">        
+                <div class="col-md-4">
+                    <label for="DEBT" class="">Had Debt (DEBT)</label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="DEBT" id="debt-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="debt-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="DEBT" id="debt-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="debt-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="FINSTR" class="">Financial Stress (FINSTR) </label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="FINSTR" id="finstr-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="finstr-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="FINSTR" id="finstr-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="finstr-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+
+        <div class="sections">
+            <span class="label" id="section-number">05</span> <span class="label" id="section-title">PSYCHOLOGICAL WELL-BEING</span>
+        </div>
+
+        <div class="input">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="ANXI" class="">Feels Anxiety (ANXI)</label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="ANXIETY" id="anxiety-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="anxiety-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="ANXIETY" id="anxiety-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="anxiety-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <label for="INFER" class="">Inferiority Complex (INFER)</label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="INFER" id="infer-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="infer-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="INFER" id="infer-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="infer-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label for="EATDIS" class="">Has Eating Disorder (EATDIS) </label>
+                        <div class="radio-options">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="EATDIS" id="eatdis-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                        <label for="eatdis-yes" class="form-check-label">Yes</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="EATDIS" id="eatdis-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                        <label for="eatdis-no" class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            
+                <div class="col-md-4">
+                    <label for="DEPRI" class="">Feels Deprived (DEPRI) </label>
+                        <div class="radio-options">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="DEPRI" id="depri-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                        <label for="depri-yes" class="form-check-label">Yes</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input type="radio" name="DEPRI" id="depri-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                        <label for="depri-no" class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    <label for="LOST" class="">Suicidal Thoughts (SUICIDE) </label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="SUICIDE" id="suicide-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="suicide-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="SUICIDE" id="suicide-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="suicide-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="POSSAT" class="">Satisfied with Current Position or Achievements (POSSAT) </label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="POSSAT" id="possat-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="possat-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="POSSAT" id="possat-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="possat-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <label for="WRKPRE" class="">Has Work/Study Pressure (WRKPRE) </label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="WRKPRE" id="wrkpre-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <label for="wrkpre-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="radio" name="WRKPRE" id="wrkpre-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <label for="wrkpre-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     
 
