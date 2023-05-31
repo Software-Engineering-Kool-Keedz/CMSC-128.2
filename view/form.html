@@ -62,6 +62,9 @@
             <span class="label" id="section-number">01</span> <span class="label" id="section-title">BASIC INFORMATION</span>
         </div>
 
+        <!-- NEED TO ADD FIELDS FOR NAME: FIRST, MIDDLE, LAST-->
+        <!-- NEED TO ADD VALUES FOR DROP DOWN FIELDS -->
+        
         <div class="input">
             <div class="row">
                 <div class="col-md-4">
@@ -182,13 +185,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="Smoker" id="smoker-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="Smoker" id="smoker-yes" value="yes" class="form-check-input" onclick="select_smoker()">
                                     <label for="smoker-yes" class="form-check-label">Yes</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="Smoker" id="smoker-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="Smoker" id="smoker-no" value="no" class="form-check-input" onclick="select_smoker()">
                                     <label for="smoker-no" class="form-check-label">No</label>
                                 </div>
                             </div>
@@ -202,13 +205,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="Insomnia" id="insomnia-yes" value="yes" class="form-check-input" onclick="select_smoker()">
+                                    <input type="radio" name="Insomnia" id="insomnia-yes" value="yes" class="form-check-input" onclick="select_insom()">
                                     <label for="insomnia-yes" class="form-check-label">Yes</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="Insomnia" id="insomnia-no" value="no" class="form-check-input" onclick="select_smoker()">
+                                    <input type="radio" name="Insomnia" id="insomnia-no" value="no" class="form-check-input" onclick="select_insom()">
                                     <label for="insomnia-no" class="form-check-label">No</label>
                                 </div>
                             </div>
@@ -248,13 +251,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="LIVWITH" id="livwith-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="LIVWITH" id="livwith-yes" value="yes" class="form-check-input" onclick="select_livwith()">
                                     <label for="livwith-yes" class="form-check-label">Yes</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="LIVWITH" id="livwith-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="LIVWITH" id="livwith-no" value="no" class="form-check-input" onclick="select_livwith()">
                                     <label for="livwith-no" class="form-check-label">No</label>
                                 </div>
                             </div>
@@ -266,13 +269,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="THREAT" id="threat-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="THREAT" id="threat-yes" value="yes" class="form-check-input" onclick="select_threat()">
                                     <label for="threat-yes" class="form-check-label">Yes</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="THREAT" id="threat-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="THREAT" id="threat-no" value="no" class="form-check-input" onclick="select_threat()">
                                     <label for="threat-no" class="form-check-label">No</label>
                                 </div>
                             </div>
@@ -284,13 +287,13 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-check">
-                                        <input type="radio" name="CHEAT" id="cheat-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                        <input type="radio" name="CHEAT" id="cheat-yes" value="yes" class="form-check-input" onclick="select_cheat()">
                                         <label for="cheat-yes" class="form-check-label">Yes</label>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-check">
-                                        <input type="radio" name="CHEAT" id="cheat-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                        <input type="radio" name="CHEAT" id="cheat-no" value="no" class="form-check-input" onclick="select_cheat()">
                                         <label for="cheat-no" class="form-check-label">No</label>
                                     </div>
                                 </div>
@@ -304,13 +307,13 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-check">
-                                        <input type="radio" name="CONFLICT" id="conflict-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                        <input type="radio" name="CONFLICT" id="conflict-yes" value="yes" class="form-check-input" onclick="select_conflict()">
                                         <label for="conflict-yes" class="form-check-label">Yes</label>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-check">
-                                        <input type="radio" name="CONFLICT" id="conflict-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                        <input type="radio" name="CONFLICT" id="conflict-no" value="no" class="form-check-input" onclick="select_conflict()">
                                         <label for="conflict-no" class="form-check-label">No</label>
                                     </div>
                                 </div>
@@ -322,13 +325,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="LOST" id="lost-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="LOST" id="lost-yes" value="yes" class="form-check-input" onclick="select_lost()">
                                     <label for="lost-yes" class="form-check-label">Yes</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="LOST" id="lost-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="LOST" id="lost-no" value="no" class="form-check-input" onclick="select_lost()">
                                     <label for="lost-no" class="form-check-label">No</label>
                                 </div>
                             </div>
@@ -340,13 +343,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="ABUSED" id="abused-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="ABUSED" id="abused-yes" value="yes" class="form-check-input" onclick="select_abused()">
                                     <label for="abused-yes" class="form-check-label">Yes</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="ABUSED" id="abused-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="ABUSED" id="abused-no" value="no" class="form-check-input" onclick="select_abused()">
                                     <label for="abused-no" class="form-check-label">No</label>
                                 </div>
                             </div>
@@ -360,13 +363,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="ENVSAT" id="envsat-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="ENVSAT" id="envsat-yes" value="yes" class="form-check-input" onclick="select_envsat()">
                                     <label for="envsat-yes" class="form-check-label">Yes</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="ENVSAT" id="envsat-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="ENVSAT" id="envsat-no" value="no" class="form-check-input" onclick="select_envsat()">
                                     <label for="envsat-no" class="form-check-label">No</label>
                                 </div>
                             </div>
@@ -462,13 +465,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="INFER" id="infer-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="INFER" id="infer-yes" value="yes" class="form-check-input" onclick="select_infer()">
                                     <label for="infer-yes" class="form-check-label">Yes</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="INFER" id="infer-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="INFER" id="infer-no" value="no" class="form-check-input" onclick="select_infer()">
                                     <label for="infer-no" class="form-check-label">No</label>
                                 </div>
                             </div>
@@ -480,13 +483,13 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-check">
-                                        <input type="radio" name="EATDIS" id="eatdis-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                        <input type="radio" name="EATDIS" id="eatdis-yes" value="yes" class="form-check-input" onclick="select_eatdis()">
                                         <label for="eatdis-yes" class="form-check-label">Yes</label>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-check">
-                                        <input type="radio" name="EATDIS" id="eatdis-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                        <input type="radio" name="EATDIS" id="eatdis-no" value="no" class="form-check-input" onclick="select_eatdis()">
                                         <label for="eatdis-no" class="form-check-label">No</label>
                                     </div>
                                 </div>
@@ -500,13 +503,13 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-check">
-                                        <input type="radio" name="DEPRI" id="depri-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                        <input type="radio" name="DEPRI" id="depri-yes" value="yes" class="form-check-input" onclick="select_depri()">
                                         <label for="depri-yes" class="form-check-label">Yes</label>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-check">
-                                        <input type="radio" name="DEPRI" id="depri-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                        <input type="radio" name="DEPRI" id="depri-no" value="no" class="form-check-input" onclick="select_depri()">
                                         <label for="depri-no" class="form-check-label">No</label>
                                     </div>
                                 </div>
@@ -518,13 +521,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="SUICIDE" id="suicide-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="SUICIDE" id="suicide-yes" value="yes" class="form-check-input" onclick="select_suicide()">
                                     <label for="suicide-yes" class="form-check-label">Yes</label>
                                 </div>§
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="SUICIDE" id="suicide-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="SUICIDE" id="suicide-no" value="no" class="form-check-input" onclick="select_suicide()">
                                     <label for="suicide-no" class="form-check-label">No</label>
                                 </div>
                             </div>
@@ -538,13 +541,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="POSSAT" id="possat-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="POSSAT" id="possat-yes" value="yes" class="form-check-input" onclick="select_possat()">
                                     <label for="possat-yes" class="form-check-label">Yes</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="POSSAT" id="possat-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="POSSAT" id="possat-no" value="no" class="form-check-input" onclick="select_possat()">
                                     <label for="possat-no" class="form-check-label">No</label>
                                 </div>
                             </div>
@@ -556,13 +559,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="WRKPRE" id="wrkpre-yes" value="yes" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="WRKPRE" id="wrkpre-yes" value="yes" class="form-check-input" onclick="select_wrkpre()">
                                     <label for="wrkpre-yes" class="form-check-label">Yes</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input type="radio" name="WRKPRE" id="wrkpre-no" value="no" class="form-check-input" onclick="select_exposure()">
+                                    <input type="radio" name="WRKPRE" id="wrkpre-no" value="no" class="form-check-input" onclick="select_wkrpre()">
                                     <label for="wrkpre-no" class="form-check-label">No</label>
                                 </div>
                             </div>

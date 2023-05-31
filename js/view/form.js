@@ -1,3 +1,10 @@
+const firstname = document.querySelector('.first-name');
+const middlename = document.querySelector('.middle-name');
+const lastname = document.querySelector('.last-name') || null;
+
+// NEED TO ADD FIELDS FOR NAME: FIRST, MIDDLE, LAST
+// NEED TO ADD VALUES FOR DROP DOWN FIELDS
+
 const AGERNG = document.querySelector('.AGERNG');
 const GENDER = document.querySelector('.GENDER') ;
 const EDU = document.querySelector('.EDU');
@@ -227,7 +234,7 @@ function select_debt(){
 
 const finstr_radio_btns = document.getElementsByName('FINSTR');
 var finstr_selected = null
-function select_debt(){
+function select_finstr(){
     for (var i = 0, iLen=finstr_radio_btns.length; i < iLen; i++) {
         if (finstr_radio_btns[i].checked) {
             finstr_radio_btns[i].value;
@@ -241,7 +248,7 @@ function select_debt(){
 
 const anxi_radio_btns = document.getElementsByName('ANXI');
 var anxi_selected = null
-function select_debt(){
+function select_anxi(){
     for (var i = 0, iLen=anxi_radio_btns.length; i < iLen; i++) {
         if (anxi_radio_btns[i].checked) {
             anxi_radio_btns[i].value;
@@ -297,7 +304,7 @@ function select_depri(){
 
 const suicide_radio_btns = document.getElementsByName('SUICIDE');
 var suicide_selected = null
-function select_eatdis(){
+function select_suicide(){
     for (var i = 0, iLen=suicide_radio_btns.length; i < iLen; i++) {
         if (suicide_radio_btns[i].checked) {
             suicide_radio_btns[i].value;
@@ -311,7 +318,7 @@ function select_eatdis(){
 
 const possat_radio_btns = document.getElementsByName('POSSAT');
 var possat_selected = null
-function possat_eatdis(){
+function select_possat(){
     for (var i = 0, iLen=possat_radio_btns.length; i < iLen; i++) {
         if (possat_radio_btns[i].checked) {
             possat_radio_btns[i].value;
@@ -337,31 +344,20 @@ function select_wrkpre(){
     wrkpre_selected = wrkpre_radio_btns[i].value
 }
 
-const suicide_radio_btns = document.getElementsByName('SUICIDE');
-var suicide_selected = null
-function select_eatdis(){
-    for (var i = 0, iLen=suicide_radio_btns.length; i < iLen; i++) {
-        if (suicide_radio_btns[i].checked) {
-            suicide_radio_btns[i].value;
-            break;
-        }
-    }
-    console.log(suicide_radio_btns[i].value)
-    // return travel_radio_btns[i].id;
-    suicide_selected = suicide_radio_btns[i].value
-}
-
 function saveRec() {
     var inv_surname = investigator.value.split(",")[0]
     console.log(age.value)
     // console.log(travel_selected);
 
-    fetch('/insert-cif', {
+    fetch('/insert-form', {
        // mode: 'no-cors',
         method: 'post',
         headers: new Headers({ 'Content-Type' : 'application/json'}),
         body: JSON.stringify({
 
+            firstname: firstname.value,
+            middlename: middlename.value,
+            lastname: lastname.value,
             gender: (gender_selected == 'yes')? true : ((gender_selected == 'no')? false : null ),
             premed: (premed_selected == 'yes')? true : ((premed_selected == 'no')? false : null ), 
             illness: (illness_selected == 'yes')? true : ((illness_selected == 'no')? false : null ), 
@@ -370,6 +366,20 @@ function saveRec() {
             drink: (drink_selected == 'yes')? true : ((drink_selected == 'no')? false : null ),
             livwith: (liviwith_selected == 'yes')? true : ((gender_selected == 'no')? false : null ),            
             threat: (threat_selected == 'yes')? true : ((threat_selected == 'no')? false : null ),            
+            cheat: (cheat_selected == 'yes')? true : ((cheat_selected == 'no')? false : null ),            
+            conflict: (conflict_selected == 'yes')? true : ((conflict_selected == 'no')? false : null ),
+            lost: (lost_selected == 'yes')? true : ((lost_selected == 'no')? false : null ), 
+            abuse: (abused_selected == 'yes')? true : ((abused_selected == 'no')? false : null ), 
+            envsat_selected: (envsat_selected == 'yes')? true : ((envsat_selected == 'no')? false : null ), 
+            debt: (debt_selected == 'yes')? true : ((debt_selected == 'no')? false : null ),   
+            finstr: (finstr_selected == 'yes')? true : ((finstr_selected == 'no')? false : null ),
+            anxi: (anxi_selected == 'yes')? true : ((anxi_selected == 'no')? false : null ),            
+            infer: (infer_selected == 'yes')? true : ((infer_selected == 'no')? false : null ),            
+            eatdis: (eatdis_selected == 'yes')? true : ((eatdis_selected == 'no')? false : null ),     
+            suicide: (suicide_selected == 'yes')? true : ((suicide_selected == 'no')? false : null ),    
+            possat: (possat_selected == 'yes')? true : ((possat_selected == 'no')? false : null ),    
+            wrkpre: (wrkpre_selected == 'yes')? true : ((wrkpre_selected == 'no')? false : null ),     
+ 
  
         })
     })
