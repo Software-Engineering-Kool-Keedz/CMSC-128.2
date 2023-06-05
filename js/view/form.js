@@ -3,7 +3,7 @@ const middlename = document.querySelector('.middle-name');
 const lastname = document.querySelector('.last-name') || null;
 
 // NEED TO ADD FIELDS FOR NAME: FIRST, MIDDLE, LAST
-// NEED TO ADD VALUES FOR DROP DOWN FIELDS
+// NEED TO ADD VALUES FOR DROP DOWN FIELDS 
 
 const AGERNG = document.querySelector('.AGERNG');
 const GENDER = document.querySelector('.GENDER') ;
