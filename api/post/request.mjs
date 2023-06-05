@@ -75,9 +75,18 @@ router.post('/result', async (req, res) => {
         const lr = await python(py_file)
 
         var resu = await lr.explainer(xtrain, ytrain, copy_body)
-        result.push(resu)
-
-        res.send(result)  
+        var resu1 = await resu[0]
+        var resu2 = await resu[1]
+        var split = resu1.slice(resu1.search("lime.PredictProba"))
+        var split2 = split.slice(0, split.indexOf(";"))
+        var split3 = split2.split("[")
+        var split4 = split3[split3.length - 1] 
+        var split5 = split4.slice(0, split4.length - 3);
+        var resJSON = {
+            "prediction":split5,
+            "features":resu2
+        }
+        res.send(resJSON) 
     })
     // then save the result to db
     // add name to result, add enc id to parameters

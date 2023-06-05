@@ -41,11 +41,12 @@ def explainer(x_train, y_train, input): # add extra input parameter
         data_row=input_sr, # swap to input
         predict_fn=lr.predict_proba
     )
-    result = exp.as_map()
-
-    
-    return str(result)
+    #exp.save_to_file(directory + "/lime_depression_lr_iloc2.html")
+    result = exp.as_html()
+    result2 = exp.as_list()
+    resarray = [str(result), str(result2)]
+    return resarray
 
     #print(x_test.iloc[4])
-    # exp.save_to_file(directory + "/lime_depression_lr_iloc2.html")
+    # 
     # check yung laman ng exp -> check kung may pwede gawin para macustomize 
