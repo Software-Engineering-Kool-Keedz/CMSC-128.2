@@ -50,6 +50,8 @@
 
 .sections {
     margin-top: 50px;
+    justify-content: left;
+    display: inline-flex;
 }
 
 .label {
@@ -63,11 +65,14 @@
 #section-number {
     padding-left: 15px;
     padding-right: 15px;
+    margin-right: 5px;
 }
 
 #section-title {
     padding-left: 15px;
-    padding-right: 75%;
+    width: 1040px;
+    text-align: left;
+    /* padding-right: 75%; */
 }
 
 .input {
