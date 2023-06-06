@@ -1,0 +1,41 @@
+table {
+    border-collapse: collapse;
+}
+
+.search-patient-table {
+    /* min-width: 900px; */
+
+    min-width: 900px;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.records-table-header {
+    background-color: #3476CE;
+    color: #fff;
+    font-size: 12px;
+    height: 50px;
+}
+
+th {
+    width: 100px;
+}
+
+tr {
+    height: 50px;
+}
+
+td {
+    min-width: 100px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(160, 196, 245, 0.2);
+}
+
+tbody {
+    font-size: 12px;
+    text-align: center;
+    color: #3B3C3E;
+}
