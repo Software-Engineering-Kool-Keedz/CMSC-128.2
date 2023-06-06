@@ -28,6 +28,9 @@
                         <a class="nav-link" href="#">Dashboard</a> <!-- To insert link here-->
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#">Search</a> <!-- To insert link here-->
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Form</a> <!-- To insert link here-->
                     </li>
                     <li class="nav-item">
@@ -61,9 +64,6 @@
         <div class="sections">
             <span class="label" id="section-number">01</span> <span class="label" id="section-title">BASIC INFORMATION</span>
         </div>
-
-        <!-- NEED TO ADD FIELDS FOR NAME: FIRST, MIDDLE, LAST-->
-        <!-- NEED TO ADD VALUES FOR DROP DOWN FIELDS -->
         
         <div class="input">
             <div class="row">
@@ -564,7 +564,7 @@
                                 <div class="form-check">
                                     <input type="radio" name="SUICIDE" id="suicide-yes" value="yes" class="form-check-input" onclick="select_suicide()">
                                     <label for="suicide-yes" class="form-check-label">Yes</label>
-                                </div>§
+                                </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
@@ -615,7 +615,41 @@
                 </div>
             </div>
         </div>
+    <!-- is_depressed?
+        <div class="sections">
+            <span class="label" id="section-number">06</span> <span class="label" id="section-title">EVALUATION</span>
+        </div>
 
+        <div class="input">
+            <div class="row">        
+                <div class="col-md-4">
+                    <label for="DEBT" class="">Depressed?</label>
+                    <div class="radio-options">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <input type="radio" name="DEPRESSED" id="depressed-yes" value="yes" class="form-check-input" onclick="select_depressed()">
+                                    <label for="depressed-yes" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <input type="radio" name="DEPRESSED" id="depressed-no" value="no" class="form-check-input" onclick="select_depressed()">
+                                    <label for="depressed-no" class="form-check-label">No</label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <input type="radio" name="DEPRESSED" id="depressed-na" value="no" class="form-check-input" onclick="select_depressed()">
+                                    <label for="depressed-na" class="form-check-label">To be evaluated</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    -->
         <div class = "button-fields">
             <span class = "button-fields-div">
                 <button class = "save-button">SAVE RECORD</button>
