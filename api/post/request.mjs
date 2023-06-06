@@ -38,9 +38,6 @@ router.post('/result', async (req, res) => {
         ctable = tb
     })
     .then(async () => {
-        //console.log(ctable)
-        //console.log(copy_body)
-        
         delete copy_body.first_name
         delete copy_body.last_name
         delete copy_body.encoder_id
@@ -96,7 +93,6 @@ router.post('/result', async (req, res) => {
         var zero = parseFloat(arr[0])
         var one = parseFloat(arr[1])
         console.log(zero, one)
-        // ai results, patient result
         var resJSON1 = {
             "NO" : zero,
             "YES" : one,
@@ -105,8 +101,7 @@ router.post('/result', async (req, res) => {
         return resJSON1
     })
     .then(async (resJSON1) => {
-        //res.send(resJSON1)
-        var dep = resJSON1.one > resJSON1.zero
+        var dep = resJSON1.YES > resJSON1.NO
         await db('patient_record').insert([{
             AGERNG: AGERNG,
             GENDER: GENDER,
@@ -148,8 +143,8 @@ router.post('/result', async (req, res) => {
             var recno = record_no[0]
             await db('patient_record_ai_results').insert([{
                 record_no: recno.record_no,
-                NO: resJSON1.zero,
-                YES: resJSON1.one,
+                NO: resJSON1.NO,
+                YES: resJSON1.YES,
                 FEATURES: resJSON1.FEATURES
             }])
             .then(async () => {
@@ -158,9 +153,8 @@ router.post('/result', async (req, res) => {
                     EVALUATION: null
                 }])
             })
-            res.json([{ 'record_no': recno.record_no}])
+            res.json([{'record_no': recno.record_no}])
         })
-        //insert to table
     })
 })
 
