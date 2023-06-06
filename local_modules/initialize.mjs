@@ -398,14 +398,47 @@ const initialize = async (db) => {
                     t.string('INFER')
                     t.string('CONFLICT')
                     t.string('LOST')
-                    t.string('result')
+                    t.boolean('DEPRESSED')
                     t.timestamp('created_at').defaultTo(db.fn.now())
-
                 })
                 .then(console.log('patient record table created successfully'))
             }
             else {
                 console.log('patient record table already exists')
+            }
+        })
+    })
+    .then(async () => {
+        await db.schema.hasTable('patient_record_ai_results').then(async (e) => {
+            if(!e){
+                await db.schema.createTable('patient_record_ai_results', (t) => {
+                    t.increments('ai_results_no').primary().unique()
+                    t.integer('record_no')
+                    t.foreign('record_no').references('patient_record.record_no')
+                    t.string('NO')
+                    t.string('YES')
+                    t.string('FEATURES')
+                })
+                .then(console.log('patient record ai results created successfully'))
+            }
+            else {
+                console.log('patient record ai results already exists')
+            }
+        })
+    })
+    .then(async () => {
+        await db.schema.hasTable('patient_record_evaluation').then(async (e) => {
+            if(!e){
+                await db.schema.createTable('patient_record_evaluation', (t) => {
+                    t.increments('eval_no').primary().unique()
+                    t.integer('record_no')
+                    t.foreign('record_no').references('patient_record.record_no')
+                    t.boolean('EVALUATION')
+                })
+                .then(console.log('patient record evaluation created successfully'))
+            }
+            else {
+                console.log('patient record evaluation already exists')
             }
         })
     })
