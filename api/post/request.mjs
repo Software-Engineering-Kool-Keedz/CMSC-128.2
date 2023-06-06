@@ -33,7 +33,6 @@ router.post('/result', async (req, res) => {
     let ctable = []
     let xtrain = []
     let ytrain = []
-    let result = []
     await db('conversions').select('*')
     .then((tb) => {
         ctable = tb
@@ -86,7 +85,16 @@ router.post('/result', async (req, res) => {
             "prediction":split5,
             "features":resu2
         }
-        res.send(resJSON) 
+        python.exit()
+        return resJSON
+    })
+    .then(async (resJSON) => {
+        var arr = resJSON.prediction.split(",")
+        var zero = parseFloat(arr[0])
+        var one = parseFloat(arr[1])
+        console.log(zero, one)
+        // ai results, patient result
+        res.send(resJSON)
     })
     // then save the result to db
     // add name to result, add enc id to parameters
