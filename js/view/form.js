@@ -2,9 +2,6 @@ const firstname = document.querySelector('.first-name');
 const middlename = document.querySelector('.middle-name');
 const lastname = document.querySelector('.last-name') || null;
 
-// NEED TO ADD FIELDS FOR NAME: FIRST, MIDDLE, LAST
-// NEED TO ADD VALUES FOR DROP DOWN FIELDS 
-
 const AGERNG = document.querySelector('.AGERNG');
 const GENDER = document.querySelector('.GENDER') ;
 const EDU = document.querySelector('.EDU');
@@ -344,6 +341,20 @@ function select_wrkpre(){
     wrkpre_selected = wrkpre_radio_btns[i].value
 }
 
+const depressed_radio_btns = document.getElementsByName('DEPRESSED');
+var depressed_selected = null
+function select_wrkpre(){
+    for (var i = 0, iLen=wrkpre_radio_btns.length; i < iLen; i++) {
+        if (wrkpre_radio_btns[i].checked) {
+            wrkpre_radio_btns[i].value;
+            break;
+        }
+    }
+    console.log(depressed_radio_btns[i].value)
+    // return travel_radio_btns[i].id;
+    depressed_selected = depressed_radio_btns[i].value
+}
+
 function saveRec() {
     var inv_surname = investigator.value.split(",")[0]
     console.log(age.value)
@@ -387,8 +398,7 @@ function saveRec() {
             suicide: (suicide_selected == 'yes')? true : ((suicide_selected == 'no')? false : null ),    
             possat: (possat_selected == 'yes')? true : ((possat_selected == 'no')? false : null ),    
             wrkpre: (wrkpre_selected == 'yes')? true : ((wrkpre_selected == 'no')? false : null ),     
- 
- 
+            is_depressed: (depressed_selected == 'yes' || 'no' || 'na')? true:false,
         })
     })
 
