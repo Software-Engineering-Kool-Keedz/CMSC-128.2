@@ -34,6 +34,8 @@ await initialize(db)
 // import api
 import pages from './api/get/pages.mjs'
 import post_req from './api/post/request.mjs'
+import get_req from './api/get/request.mjs'
+import put_req from './api/put/request.mjs'
 
 const app = express()
 
@@ -42,7 +44,9 @@ let initialPath = path.join(__dirname);
 app.use(bodyParser.json());
 app.use(express.static(initialPath));
 app.use('', pages)
-app.use('/request', post_req)
+app.use('/post', post_req)
+app.use('/get', get_req)
+app.use('/update', put_req)
 
 const PORT = process.env.PORT || 3000
 

@@ -2,7 +2,7 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 import path from "path";
 import { fileURLToPath } from "url";
-import db from '../../db/connection.mjs'
+import db from '../../db/connection.mjs';
 import { decrypt } from "../../local_modules/secret.mjs";
 import { python } from "pythonia";
 
@@ -38,9 +38,6 @@ router.post('/result', async (req, res) => {
         ctable = tb
     })
     .then(async () => {
-        //console.log(ctable)
-        //console.log(copy_body)
-        
         delete copy_body.first_name
         delete copy_body.last_name
         delete copy_body.encoder_id
@@ -96,7 +93,6 @@ router.post('/result', async (req, res) => {
         var zero = parseFloat(arr[0])
         var one = parseFloat(arr[1])
         console.log(zero, one)
-        // ai results, patient result
         var resJSON1 = {
             "NO" : zero,
             "YES" : one,
@@ -105,8 +101,7 @@ router.post('/result', async (req, res) => {
         return resJSON1
     })
     .then(async (resJSON1) => {
-        //res.send(resJSON1)
-        var dep = resJSON1.one > resJSON1.zero
+        var dep = resJSON1.YES > resJSON1.NO
         await db('patient_record').insert([{
             AGERNG: AGERNG,
             GENDER: GENDER,
@@ -145,27 +140,22 @@ router.post('/result', async (req, res) => {
         }])
         .returning('record_no')
         .then(async (record_no) => {
+            var recno = record_no[0]
             await db('patient_record_ai_results').insert([{
-                record_no: record_no,
-                NO: resJSON1.zero,
-                YES: resJSON1.one,
+                record_no: recno.record_no,
+                NO: resJSON1.NO,
+                YES: resJSON1.YES,
                 FEATURES: resJSON1.FEATURES
             }])
             .then(async () => {
                 await db('patient_record_evaluation').insert([{
-                    record_no: record_no,
+                    record_no: recno.record_no,
                     EVALUATION: null
                 }])
             })
+            res.json([{'record_no': recno.record_no}])
         })
-        res.send(resJSON1)
-        //insert to table
     })
-    // then save the result to db
-    // add name to result, add enc id to parameters
-
-    // create separte table for real value
-    // USE POSTMAN TO TEST
 })
 
 router.post('/login', (req, res) => {

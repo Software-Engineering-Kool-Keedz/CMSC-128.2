@@ -402,7 +402,7 @@ const initialize = async (db) => {
                     t.foreign('record_no').references('patient_record.record_no')
                     t.float('NO')
                     t.float('YES')
-                    t.string('FEATURES')
+                    t.text('FEATURES')
                 })
                 .then(console.log('patient record ai results created successfully'))
             }
