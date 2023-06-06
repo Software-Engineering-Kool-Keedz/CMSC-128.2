@@ -317,21 +317,6 @@ const initialize = async (db) => {
         })
     })
     .then(async () => {
-        await db.schema.hasTable('patient').then(async (e) => {
-            if(!e){
-                await db.schema.createTable('patient', (t) => {
-                    t.increments('id').primary().unique()
-                    t.string('first_name')
-                    t.string('last_name')
-                })
-                .then(console.log('patient table created successfully'))
-            }
-            else {
-                console.log('patient table already exists')
-            }
-        })
-    })
-    .then(async () => {
         await db.schema.hasTable('user').then(async (e) => {
             if(!e){
                 await db.schema.createTable('user', (t) => {
@@ -364,9 +349,9 @@ const initialize = async (db) => {
             if(!e){
                 await db.schema.createTable('patient_record', (t) => {
                     t.increments('record_no').primary().unique()
-                    t.integer('patient_id')
+                    t.string('first_name')
+                    t.string('last_name')
                     t.integer('encoder_id')
-                    t.foreign('patient_id').references('patient.id')
                     t.foreign('encoder_id').references('user.id')
                     t.string('AGERNG')
                     t.string('GENDER')
@@ -415,8 +400,8 @@ const initialize = async (db) => {
                     t.increments('ai_results_no').primary().unique()
                     t.integer('record_no')
                     t.foreign('record_no').references('patient_record.record_no')
-                    t.string('NO')
-                    t.string('YES')
+                    t.float('NO')
+                    t.float('YES')
                     t.string('FEATURES')
                 })
                 .then(console.log('patient record ai results created successfully'))
