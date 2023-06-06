@@ -50,6 +50,8 @@
 
 .sections {
     margin-top: 50px;
+    justify-content: left;
+    display: inline-flex;
 }
 
 .label {
@@ -63,11 +65,14 @@
 #section-number {
     padding-left: 15px;
     padding-right: 15px;
+    margin-right: 5px;
 }
 
 #section-title {
     padding-left: 15px;
-    padding-right: 75%;
+    width: 1060px;
+    text-align: left;
+    /* padding-right: 75%; */
 }
 
 .input {
@@ -75,9 +80,41 @@
     vertical-align: middle;
     margin-left: auto;
     margin-right: auto;
-    width: 98.3%;
+    /* width: 98.3%; */
     padding: 20px;
     margin-top: 20px;
     border: 2px solid;
     border-radius: 10px;
+}
+
+.form-control, .form-select, .radio-options {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.form-control, .form-select {
+    border: 1px solid black;
+}
+
+input[type="radio"] {
+    border: 0.05em solid black;
+}
+
+.button-fields {
+    margin: 50px;
+}
+
+.save-button {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 30px;
+    color: white;
+    width: 200px;
+    height: 50px;
+}
+
+.save-button:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
 }
