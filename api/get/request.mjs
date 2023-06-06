@@ -1,15 +1,15 @@
 //search
-router.get('/patient', (req, res) => {
-    db('patient').select(['patient.first_name', 'patient.last_name', 'patient.id'])
+router.get('/patient_record', (req, res) => {
+    db('patient_record').select(['patient_record.first_name', 'patient_record.last_name', 'patient_record.record_no'])
     .where((builder) => {
-        if(req.query['patient.first_name'] && req.query['patient.last_name']){
-             builder.whereILike('patient.first_name', `${req.query['patient.first_name']}%`)
-             .andWhereILike('patient.last_name', `${req.query['patient.last_name']}%`);
+        if(req.query['patient_record.first_name'] && req.query['patient_record.last_name']){
+             builder.whereILike('patient_record.first_name', `${req.query['patient_record.first_name']}%`)
+             .andWhereILike('patient_record.last_name', `${req.query['patient_record.last_name']}%`);
         }
-        else if(req.query['patient.last_name']) builder.whereILike('patient.last_name', `${req.query['patient.last_name']}%`);
-        else if(req.query['patient.first_name']) builder.whereILike('patient.first_name', `${req.query['patient.first_name']}%`);
+        else if(req.query['patient_record.last_name']) builder.whereILike('patient_record.last_name', `${req.query['patient_record.last_name']}%`);
+        else if(req.query['patient_record.first_name']) builder.whereILike('patient_record.first_name', `${req.query['patient_record.first_name']}%`);
     })
-    // .orderBy('patient.created_at', 'asc')
+    .orderBy('patient_record.created_at', 'asc')
     .returning()
     .then((data) => {
         res.json(data);

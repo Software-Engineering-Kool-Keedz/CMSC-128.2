@@ -14,4 +14,20 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__root, '/view/home.html'))
 })
 
+router.get('/form', (req, res) => {
+    res.sendFile(path.join(__root, '/view/form.html'))
+})
+
+router.get('/result', (req, res) => {
+    res.sendFile(path.join(__root, '/view/explainableAI.html'))
+})
+
+router.get('/search', (req, res) => {
+    res.sendFile(path.join(__root, '/view/search.html'))
+})
+
+router.get('/login', (req, res) => {
+    res.sendFile(path.join(__root, '/view/login.html'))
+})
+
 export default router
