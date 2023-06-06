@@ -2,7 +2,7 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 import path from "path";
 import { fileURLToPath } from "url";
-import db from '../../db/connection.mjs'
+import db from '../../db/connection.mjs';
 import { decrypt } from "../../local_modules/secret.mjs";
 import { python } from "pythonia";
 
