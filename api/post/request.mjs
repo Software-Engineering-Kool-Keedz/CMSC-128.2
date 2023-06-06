@@ -21,7 +21,7 @@ router.post('/result', async (req, res) => {
     DEBT, PHYEX, SMOKE, DRINK, ILLNESS, PREMED,
     EATDIS, AVGSLP, INSOM, TSSN, WRKPRE, ANXI,
     DEPRI, ABUSED, CHEAT,THREAT, SUICIDE, INFER,
-    CONFLICT, LOST } = req.body
+    CONFLICT, LOST ,first_name, last_name, encoder_id} = req.body
     let copy_body = Object.assign({}, req.body)
     //CONVERT
     const cols = ["AGERNG", "GENDER", "EDU", "PROF", "MARSTS",
@@ -40,7 +40,10 @@ router.post('/result', async (req, res) => {
     .then(async () => {
         //console.log(ctable)
         //console.log(copy_body)
-
+        
+        delete copy_body.first_name
+        delete copy_body.last_name
+        delete copy_body.encoder_id
         // convert each value into standard value
         let idx = 0
         for (var key in copy_body){
@@ -94,7 +97,69 @@ router.post('/result', async (req, res) => {
         var one = parseFloat(arr[1])
         console.log(zero, one)
         // ai results, patient result
-        res.send(resJSON)
+        var resJSON1 = {
+            "NO" : zero,
+            "YES" : one,
+            "FEATURES": resJSON.features
+        }
+        return resJSON1
+    })
+    .then(async (resJSON1) => {
+        //res.send(resJSON1)
+        var dep = resJSON1.one > resJSON1.zero
+        await db('patient_record').insert([{
+            AGERNG: AGERNG,
+            GENDER: GENDER,
+            EDU: EDU,
+            PROF: PROF,
+            MARSTS: MARSTS,
+            RESDPL: RESDPL,
+            LIVWTH: LIVWTH,
+            ENVSAT: ENVSAT,
+            POSSAT: POSSAT,
+            FINSTR: FINSTR,
+            DEBT: DEBT,
+            PHYEX: PHYEX,
+            SMOKE: SMOKE,
+            DRINK: DRINK,
+            ILLNESS: ILLNESS,
+            PREMED: PREMED,
+            EATDIS: EATDIS,
+            AVGSLP: AVGSLP,
+            INSOM: INSOM,
+            TSSN: TSSN,
+            WRKPRE: WRKPRE,
+            ANXI: ANXI,
+            DEPRI: DEPRI,
+            ABUSED: ABUSED,
+            CHEAT: CHEAT,
+            THREAT: THREAT,
+            SUICIDE: SUICIDE,
+            INFER: INFER,
+            CONFLICT: CONFLICT,
+            LOST: LOST,
+            DEPRESSED: dep,
+            first_name: first_name,
+            last_name: last_name,
+            encoder_id: encoder_id
+        }])
+        .returning('record_no')
+        .then(async (record_no) => {
+            await db('patient_record_ai_results').insert([{
+                record_no: record_no,
+                NO: resJSON1.zero,
+                YES: resJSON1.one,
+                FEATURES: resJSON1.FEATURES
+            }])
+            .then(async () => {
+                await db('patient_record_evaluation').insert([{
+                    record_no: record_no,
+                    EVALUATION: null
+                }])
+            })
+        })
+        res.send(resJSON1)
+        //insert to table
     })
     // then save the result to db
     // add name to result, add enc id to parameters

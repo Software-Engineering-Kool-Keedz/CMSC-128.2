@@ -1,3 +1,9 @@
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
+const express = require('express');
+const router = express.Router();
+
 //search
 router.get('/patient_record', (req, res) => {
     db('patient_record').select(['patient_record.first_name', 'patient_record.last_name', 'patient_record.record_no'])
