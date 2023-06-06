@@ -341,7 +341,7 @@ function select_wrkpre(){
     wrkpre_selected = wrkpre_radio_btns[i].value
 }
 
-const depressed_radio_btns = document.getElementsByName('DEPRESSED');
+/*const depressed_radio_btns = document.getElementsByName('DEPRESSED');
 var depressed_selected = null
 function select_wrkpre(){
     for (var i = 0, iLen=wrkpre_radio_btns.length; i < iLen; i++) {
@@ -353,7 +353,7 @@ function select_wrkpre(){
     console.log(depressed_radio_btns[i].value)
     // return travel_radio_btns[i].id;
     depressed_selected = depressed_radio_btns[i].value
-}
+}*/
 
 function saveRec() {
     var inv_surname = investigator.value.split(",")[0]
@@ -398,7 +398,7 @@ function saveRec() {
             suicide: (suicide_selected == 'yes')? true : ((suicide_selected == 'no')? false : null ),    
             possat: (possat_selected == 'yes')? true : ((possat_selected == 'no')? false : null ),    
             wrkpre: (wrkpre_selected == 'yes')? true : ((wrkpre_selected == 'no')? false : null ),     
-            is_depressed: (depressed_selected == 'yes' || 'no' || 'na')? true:false,
+            /*is_depressed: (depressed_selected == 'yes' || 'no' || 'na')? true:false,*/
         })
     })
 
