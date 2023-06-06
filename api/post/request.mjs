@@ -145,27 +145,23 @@ router.post('/result', async (req, res) => {
         }])
         .returning('record_no')
         .then(async (record_no) => {
+            var recno = record_no[0]
             await db('patient_record_ai_results').insert([{
-                record_no: record_no,
+                record_no: recno.record_no,
                 NO: resJSON1.zero,
                 YES: resJSON1.one,
                 FEATURES: resJSON1.FEATURES
             }])
             .then(async () => {
                 await db('patient_record_evaluation').insert([{
-                    record_no: record_no,
+                    record_no: recno.record_no,
                     EVALUATION: null
                 }])
             })
+            res.json([{ 'record_no': recno.record_no}])
         })
-        res.send(resJSON1)
         //insert to table
     })
-    // then save the result to db
-    // add name to result, add enc id to parameters
-
-    // create separte table for real value
-    // USE POSTMAN TO TEST
 })
 
 router.post('/login', (req, res) => {
