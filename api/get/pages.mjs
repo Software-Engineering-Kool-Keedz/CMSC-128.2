@@ -26,6 +26,10 @@ router.get('/search', (req, res) => {
     res.sendFile(path.join(__root, '/view/search.html'))
 })
 
+router.get('/users', (req, res) => {
+    res.sendFile(path.join(__root, '/view/user.html'))
+})
+
 router.get('/login', (req, res) => {
     res.sendFile(path.join(__root, '/view/login.html'))
 })

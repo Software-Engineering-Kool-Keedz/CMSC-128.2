@@ -79,7 +79,7 @@ body {
     background-position-x: 10px;
 }
 
-#username-input {
+#username {
     margin-top: 30px;
     background-image: url("../img/PersonFill.png");
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@ body {
     background-position-x: 10px;
 }
 
-#password-input {
+#password {
     margin-top: 20px;
     background-image: url("../img/LockFill.png");
     background-repeat: no-repeat;

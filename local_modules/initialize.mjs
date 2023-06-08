@@ -321,7 +321,7 @@ const initialize = async (db) => {
             if(!e){
                 await db.schema.createTable('user', (t) => {
                     t.increments('id').primary().unique()
-                    t.string('username')
+                    t.string('username').unique()
                     t.json('password')
                     t.string('role')
                 })

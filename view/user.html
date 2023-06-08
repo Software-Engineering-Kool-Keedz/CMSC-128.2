@@ -67,7 +67,8 @@
             <table class="recordsTable" cellspacing="0">
                 <thead>
                     <tr class="records-table-header">
-                        <th id="first-col">Username</th>
+                        <th id="first-col">ID</th>
+                        <th>Username</th>
                         <th>Role</th>
                     </tr>
                 </thead>
@@ -94,7 +95,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label for="username" class="form-label"> Username</label>
-                                <input type="text" id="user-name" class="form-control">
+                                <input type="text" id="username" class="form-control">
                             </div>
                     
                             <div class="col-md-4">
@@ -104,10 +105,10 @@
                     
                             <div class="col-md-4">
                                 <label for="ROLE" class="">Role</label>
-                                <select id="ROLE" class="form-select">
+                                <select id="role" class="form-select">
                                     <option value="" disabled selected>Choose...</option>
-                                    <option value="Admin">Admin</option>
-                                    <option value="Physician">Physician</option>
+                                    <option value="administrator">Admin</option>
+                                    <option value="physician">Physician</option>
                                 </select>
                             </div>
                         </div>
@@ -115,12 +116,15 @@
                 </div>
             </div>
         </div>
+
+        <button class="add-btn btn btn-primary btn-block mb-4">Add</button>
+
     </div>
 
 
     
     
 
-
+<script src="../js/view/user.js"></script>
 </body>
 </html>

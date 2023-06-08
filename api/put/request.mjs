@@ -6,9 +6,9 @@ const express = require('express');
 const router = express.Router();
 
 router.put('/evaluation', (req, res) => {
-    const {record_no, EVALUATION} = req.body
+    const {eval_no, EVALUATION} = req.body
     db('patient_record_evaluation')
-    .where({record_no: record_no})
+    .where({eval_no: eval_no})
     .update({
         EVALUATION: EVALUATION
     })

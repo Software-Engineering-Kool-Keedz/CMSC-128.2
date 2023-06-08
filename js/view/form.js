@@ -1,19 +1,20 @@
-const firstname = document.querySelector('.first-name');
-const middlename = document.querySelector('.middle-name');
-const lastname = document.querySelector('.last-name') || null;
+const firstname = document.querySelector('#first-name');
+const lastname = document.querySelector('#last-name');
 
-const AGERNG = document.querySelector('.AGERNG');
-const GENDER = document.querySelector('.GENDER') ;
-const EDU = document.querySelector('.EDU');
-const PROF = document.querySelector('.PROF');
-const MARSTS = document.querySelector('.MARSTS');
-const RESDPL = document.querySelector('.RESDPL');
+const AGERNG = document.querySelector('#AGERNG');
+/*const GENDER = document.querySelector('.GENDER') ;*/
+const EDU = document.querySelector('#EDU');
+const PROF = document.querySelector('#PROF');
+const MARSTS = document.querySelector('#MARSTS');
+const RESDPL = document.querySelector('#RESDPL');
+const PHYEX = document.querySelector('#PHEX') ;
+const TSSN = document.querySelector('#TSSN');
+/*
 const LIVWTH = document.querySelector('.LIVWTH');
 const ENVSAT = document.querySelector('.ENVSAT');
 const POSSAT = document.querySelector('.POSSAT');
 const FINSTR = document.querySelector('.FINSTR');
 const DEBT = document.querySelector('.DEBT');
-const PHYEX = document.querySelector('.PHYEX') ;
 const SMOKE = document.querySelector('.SMOKE');
 const DRINK = document.querySelector('.DRINK');
 const ILLNESS = document.querySelector('.ILLNESS');
@@ -21,7 +22,6 @@ const PREMED = document.querySelector('.PREMED');
 const EATDIS = document.querySelector('.EATDIS');
 const AVGSLP = document.querySelector('.AVGSLP');
 const INSOM = document.querySelector('.INSOM');
-const TSSN = document.querySelector('.TSSN');
 const WRKPRE = document.querySelector('.WRKPRE');
 const ANXI = document.querySelector('.ANXI') ;
 const DEPRI = document.querySelector('.DEPRI');
@@ -32,8 +32,9 @@ const SUICIDE = document.querySelector('.SUICIDE');
 const INFER = document.querySelector('.INFER');
 const CONFLICT = document.querySelector('.CONFLICT');
 const LOST = document.querySelector('.LOST');
+*/
 
-const gender_radio_btns = document.getElementsByName('gender');
+const gender_radio_btns = document.getElementsByName('GENDER');
 var gender_selected = null
 function select_gender(){
     for (var i = 0, iLen=gender_radio_btns.length; i < iLen; i++) {
@@ -47,7 +48,7 @@ function select_gender(){
     gender_selected = gender_radio_btns[i].value
 }
 
-const premed_radio_btns = document.getElementsByName('premed');
+const premed_radio_btns = document.getElementsByName('PREMED');
 var premed_selected = null
 function select_premed(){
     for (var i = 0, iLen=premed_radio_btns.length; i < iLen; i++) {
@@ -61,7 +62,7 @@ function select_premed(){
     premed_selected = premed_radio_btns[i].value
 }
 
-const illness_radio_btns = document.getElementsByName('Illness');
+const illness_radio_btns = document.getElementsByName('ILLNESS');
 var illness_selected = null
 function select_illness(){
     for (var i = 0, iLen=illness_radio_btns.length; i < iLen; i++) {
@@ -75,7 +76,7 @@ function select_illness(){
     illness_selected = illness_radio_btns[i].value
 }
 
-const smoker_radio_btns = document.getElementsByName('Smoker');
+const smoker_radio_btns = document.getElementsByName('SMOKER');
 var smoker_selected = null
 function select_smoker(){
     for (var i = 0, iLen=smoker_radio_btns.length; i < iLen; i++) {
@@ -89,9 +90,9 @@ function select_smoker(){
     smoker_selected = smoker_radio_btns[i].value
 }
 
-const insomnia_radio_btns = document.getElementsByName('Insomnia');
+const insomnia_radio_btns = document.getElementsByName('INSOMNIA');
 var insomnia_selected = null
-function select_smoker(){
+function select_insom(){
     for (var i = 0, iLen=insomnia_radio_btns.length; i < iLen; i++) {
         if (insomnia_radio_btns[i].checked) {
             insomnia_radio_btns[i].value;
@@ -122,16 +123,16 @@ var livwith_selected = null
 function select_livwith(){
     for (var i = 0, iLen=livwith_radio_btns.length; i < iLen; i++) {
         if (livwith_radio_btns[i].checked) {
-            liviwith_radio_btns[i].value;
+            livwith_radio_btns[i].value;
             break;
         }
     }
-    console.log(liviwith_radio_btns[i].value)
+    console.log(livwith_radio_btns[i].value)
     // return travel_radio_btns[i].id;
     livwith_selected = livwith_radio_btns[i].value
 }
 
-const threat_radio_btns = document.getElementsByName('DRINK');
+const threat_radio_btns = document.getElementsByName('THREAT');
 var threat_selected = null
 function select_threat(){
     for (var i = 0, iLen=threat_radio_btns.length; i < iLen; i++) {
@@ -147,7 +148,7 @@ function select_threat(){
 
 const cheat_radio_btns = document.getElementsByName('CHEAT');
 var cheat_selected = null
-function select_drink(){
+function select_cheat(){
     for (var i = 0, iLen=cheat_radio_btns.length; i < iLen; i++) {
         if (cheat_radio_btns[i].checked) {
             cheat_radio_btns[i].value;
@@ -356,53 +357,58 @@ function select_wrkpre(){
 }*/
 
 function saveRec() {
-    var inv_surname = investigator.value.split(",")[0]
-    console.log(age.value)
     // console.log(travel_selected);
 
-    fetch('/insert-form', {
+    fetch('post/result', {
        // mode: 'no-cors',
         method: 'post',
         headers: new Headers({ 'Content-Type' : 'application/json'}),
         body: JSON.stringify({
 
-            firstname: firstname.value,
-            middlename: middlename.value,
-            lastname: lastname.value,
             AGERNG: AGERNG.value,
+            GENDER: (gender_selected == 'male')? 'Male' : ((gender_selected == 'female')? 'Female' : null ),
             EDU: EDU.value,
             PROF: PROF.value,
             MARSTS: MARSTS.value,
             RESDPL: RESDPL.value,
+            LIVWTH: (livwith_selected == 'yes') ? 'With Family' : ((livwith_selected == 'no')? 'Without Family' : null ),            
+            ENVSAT: (envsat_selected == 'yes')? 'Yes' : ((envsat_selected == 'no')? 'No' : null ), 
+            POSSAT: (possat_selected == 'yes')? 'Yes' : ((possat_selected == 'no')? 'No' : null ),    
+            FINSTR: (finstr_selected == 'yes')? 'Yes' : ((finstr_selected == 'no')? 'No' : null ),
+            DEBT: (debt_selected == 'yes')? 'Yes' : ((debt_selected == 'no')? 'No' : null ),   
             PHYEX: PHYEX.value,
+            SMOKE: (smoker_selected == 'yes')? 'Yes' : ((smoker_selected == 'no')? 'No' : null ), 
+            DRINK: (drink_selected == 'yes')? 'Yes' : ((drink_selected == 'no')? 'No' : null ),
+            ILLNESS: (illness_selected == 'yes')? 'Yes' : ((illness_selected == 'no')? 'No' : null ), 
+            PREMED: (premed_selected == 'yes')? 'Yes' : ((premed_selected == 'no')? 'No' : null ), 
+            EATDIS: (eatdis_selected == 'yes')? 'Yes' : ((eatdis_selected == 'no')? 'No' : null ),     
             AVGSLP: AVGSLP.value,
+            INSOM: (insomnia_selected == 'yes')? 'Yes' : ((insomnia_selected == 'no')? 'No' : null ),   
             TSSN: TSSN.value,
-            gender: (gender_selected == 'yes')? true : ((gender_selected == 'no')? false : null ),
-            premed: (premed_selected == 'yes')? true : ((premed_selected == 'no')? false : null ), 
-            illness: (illness_selected == 'yes')? true : ((illness_selected == 'no')? false : null ), 
-            smoker: (smoker_selected == 'yes')? true : ((smoker_selected == 'no')? false : null ), 
-            insomnia: (insomnia_selected == 'yes')? true : ((insomnia_selected == 'no')? false : null ),   
-            drink: (drink_selected == 'yes')? true : ((drink_selected == 'no')? false : null ),
-            livwith: (liviwith_selected == 'yes')? true : ((gender_selected == 'no')? false : null ),            
-            threat: (threat_selected == 'yes')? true : ((threat_selected == 'no')? false : null ),            
-            cheat: (cheat_selected == 'yes')? true : ((cheat_selected == 'no')? false : null ),            
-            conflict: (conflict_selected == 'yes')? true : ((conflict_selected == 'no')? false : null ),
-            lost: (lost_selected == 'yes')? true : ((lost_selected == 'no')? false : null ), 
-            abuse: (abused_selected == 'yes')? true : ((abused_selected == 'no')? false : null ), 
-            envsat_selected: (envsat_selected == 'yes')? true : ((envsat_selected == 'no')? false : null ), 
-            debt: (debt_selected == 'yes')? true : ((debt_selected == 'no')? false : null ),   
-            finstr: (finstr_selected == 'yes')? true : ((finstr_selected == 'no')? false : null ),
-            anxi: (anxi_selected == 'yes')? true : ((anxi_selected == 'no')? false : null ),            
-            infer: (infer_selected == 'yes')? true : ((infer_selected == 'no')? false : null ),            
-            eatdis: (eatdis_selected == 'yes')? true : ((eatdis_selected == 'no')? false : null ),     
-            suicide: (suicide_selected == 'yes')? true : ((suicide_selected == 'no')? false : null ),    
-            possat: (possat_selected == 'yes')? true : ((possat_selected == 'no')? false : null ),    
-            wrkpre: (wrkpre_selected == 'yes')? true : ((wrkpre_selected == 'no')? false : null ),     
-            /*is_depressed: (depressed_selected == 'yes' || 'no' || 'na')? true:false,*/
+            WRKPRE: WRKPRE.value,
+            ANXI: (anxi_selected == 'yes')? 'Yes' : ((anxi_selected == 'no')? 'No' : null ),            
+            DEPRI: (depri_selected == 'yes')? 'Yes' : ((depri_selected == 'no')? 'No' : null ),            
+            ABUSED: (abused_selected == 'yes')? 'Yes' : ((abused_selected == 'no')? 'No' : null ), 
+            CHEAT: (cheat_selected == 'yes')? 'Yes' : ((cheat_selected == 'no')? 'No' : null ),            
+            THREAT: (threat_selected == 'yes')? 'Yes' : ((threat_selected == 'no')? 'No' : null ),            
+            SUICIDE: (suicide_selected == 'yes')? 'Yes' : ((suicide_selected == 'no')? 'No' : null ),    
+            INFER: (infer_selected == 'yes')? 'Yes' : ((infer_selected == 'no')? 'No' : null ),            
+            CONFLICT: (conflict_selected == 'yes')? 'Yes' : ((conflict_selected == 'no')? 'No' : null ),
+            LOST: (lost_selected == 'yes')? 'Yes' : ((lost_selected == 'no')? 'No' : null ), 
+            first_name: firstname.value,
+            last_name: lastname.value,
+            encoder_id: sessionStorage.getItem('id'),
+            /*is_depressed: (depressed_selected == 'yes' || 'no' || 'na')? 'Yes':'No',*/
         })
     })
-
-    location.href = '/'
+    .then(res => res.json())
+    .then(data => {
+        if (data[0].event == 'input error') alert('Input error')
+        else {
+            alert('Moving to result page')
+            location.href = '/result'
+        }
+    })
 }
 
 

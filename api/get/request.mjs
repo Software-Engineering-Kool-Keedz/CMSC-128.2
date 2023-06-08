@@ -1,5 +1,6 @@
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
+import db from '../../db/connection.mjs';
 
 const express = require('express');
 const router = express.Router();
@@ -21,3 +22,12 @@ router.get('/patient_record', (req, res) => {
         res.json(data);
     })
 })
+
+router.get('/users', (req, res) => {
+    db('user').select(['id', 'username', 'role'])
+    .returning()
+    .then((data) => {
+        res.json(data);
+    })
+})
+export default router

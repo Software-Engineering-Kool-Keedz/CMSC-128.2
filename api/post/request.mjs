@@ -3,7 +3,7 @@ const require = createRequire(import.meta.url);
 import path from "path";
 import { fileURLToPath } from "url";
 import db from '../../db/connection.mjs';
-import { decrypt } from "../../local_modules/secret.mjs";
+import { encrypt, decrypt } from "../../local_modules/secret.mjs";
 import { python } from "pythonia";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -52,7 +52,7 @@ router.post('/result', async (req, res) => {
             }
             idx++
         }
-        //console.log(copy_body)
+        console.log(copy_body)
         //input copy body + x train + y train to explainer.py function
     })
     .then(async () => {
@@ -153,15 +153,20 @@ router.post('/result', async (req, res) => {
                     EVALUATION: null
                 }])
             })
-            res.json([{'record_no': recno.record_no}])
+            res.json([{
+                'record_no': recno.record_no,
+                'event': 'record added'}])
         })
+    })
+    .catch((err) => {
+        res.json([{'event': 'input error'}])
     })
 })
 
 router.post('/login', (req, res) => {
     const { username, password } = req.body
     db('user')
-    .select('username', 'password', 'role')
+    .select('id', 'username', 'password', 'role')
     .where({
         username: username
     })
@@ -171,6 +176,7 @@ router.post('/login', (req, res) => {
             if (data[0].password === password) {
                 res.json([{
                     event: 'login success',
+                    id: data[0].id,
                     username: data[0].username,
                     role: data[0].role
                 }])
@@ -178,6 +184,22 @@ router.post('/login', (req, res) => {
             else res.json([{ event: 'incorrect password' }])
         }
         else res.json([{ event: 'user not found' }])
+    })
+})
+
+
+router.post('/add-user', (req, res) => {
+    const {username, password, role} = req.body
+    db('user').insert([{
+        username: username,
+        password: encrypt(password),
+        role: role
+    }])
+    .then(() => {
+        res.json([{event: 'add-user success'}])
+    })
+    .catch(err => {
+        res.json([{event: 'add-user error'}])
     })
 })
 
