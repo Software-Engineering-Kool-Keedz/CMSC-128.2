@@ -51,7 +51,7 @@ router.get('/record/:record_no', async (req, res) => {
         resJSON.push(data)
     })
     .then(async () => {
-        await db('patient_record_evaluation').select(['EVALUATION'])
+        await db('patient_record_evaluation').select(['EVALUATION', 'eval_no'])
         .where('record_no', record)
         .returning()
         .then((data) => {

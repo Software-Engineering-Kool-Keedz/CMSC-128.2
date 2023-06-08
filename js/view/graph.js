@@ -116,7 +116,10 @@
       else if (abbr === 'DEPRI') return ''
       else if (abbr === 'ABUSED') return ''
       else if (abbr === 'CHEAT') return ''
-      
+      else if (abbr === 'THREAT') return ''
+      else if (abbr === 'SUICIDE') return ''
+      else if (abbr === 'INFER') return ''
+      else if (abbr === 'CONFLICT') return ''
 
     }
     
