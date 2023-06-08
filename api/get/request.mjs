@@ -60,4 +60,15 @@ router.get('/record/:record_no', async (req, res) => {
         })
     })
 })
+
+router.get('/features', (req, res)=> {
+    var features = req.query['features'].split(',')
+    var record = req.query['patient_record']
+    db('patient_record').select(features).where('record_no', record)
+    .returning()
+    .then(data => {
+        res.json(data)
+    })
+    .catch(err => console.log(err))
+})
 export default router
