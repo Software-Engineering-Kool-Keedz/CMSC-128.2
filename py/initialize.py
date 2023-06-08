@@ -13,9 +13,7 @@ df = pd.read_csv(directory + "/py/dataset.csv")
 
 # Selecting duplicate rows except first 
 # occurrence based on all columns
-# saves the duplicates in the dataframe called dup
 df_nodup = df.drop_duplicates()
-df_nodup.to_csv(directory + "/py/dataset-nodup.csv")
 
 categorical_cols = df_nodup.columns
 categorical_cols = categorical_cols.drop("DEPRESSED")
