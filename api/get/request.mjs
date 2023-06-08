@@ -31,6 +31,16 @@ router.get('/users', (req, res) => {
     })
 })
 
+router.get('/ai-result/:record_no', (req, res) => {
+    const record = req.params.record_no;
+    db('patient_record_ai_results').select(['NO', 'YES', 'FEATURES'])
+    .where('record_no', record)
+    .returning()
+    .then(data => {
+        res.json(data);
+    })
+})
+
 router.get('/record/:record_no', async (req, res) => {
     const record = req.params.record_no;
     var resJSON = []

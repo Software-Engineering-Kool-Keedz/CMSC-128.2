@@ -1,9 +1,16 @@
-    // setup 
-    const data = {
+    const recordno = sessionStorage.getItem('recordno');
+    
+    fetch(`/get/ai-result/${recordno}`, {
+      method: 'GET',
+      headers: new Headers({'Content-Type': 'application/json'})
+    })
+    .then(res => res.json())
+    .then(dat => {
+      const data = {
         labels: ['Not Depressed', 'Depressed'],
         datasets: [{
           label: 'Prediction Probabilities',
-          data: [0.45, 0.55], //to insert results here
+          data: [dat[0].NO, dat[0].YES], //to insert results here
           backgroundColor: [
             'rgba(255, 26, 104, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -47,5 +54,15 @@
       );
   
       // Instantly assign Chart.js version
-      const chartVersion = document.getElementById('chartVersion');
-      chartVersion.innerText = Chart.version;
+      // const chartVersion = document.getElementById('chartVersion');
+      // chartVersion.innerText = myChart.version;
+      
+      const sentence  = document.querySelector('.sentence');
+      sentence.innerHTML = `
+      The model suggests that the patient has a ${(dat[0].YES*100).toFixed(2)}%
+      chance of having depression. This is based on the patient's response to the 
+      questions related to the following:
+      `
+    })
+    
+    // setup 
