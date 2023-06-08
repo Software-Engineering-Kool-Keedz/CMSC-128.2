@@ -55,59 +55,54 @@
         <p class = "h1"> EXPLAINABLE AI PAGE</p>
         <div class="row">
             <div class="col">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                deserunt mollit anim id est laborum."
+                This section displays the diagnosis of DAISo based on the responses in the form page.
             </div>
         </div>
 
         <div class ="row">
-            <div class="chartCard">
-                <div class="chartBox">
-                  <canvas id="myChart"></canvas>
-                </div>
+            <div class="col" id="interpret">
+                
+                    <div class="col" id="tag">
+                        <div class="" id="res-btn1">Interpretation</div> <!-- REMOVE AS BUTTON -->
+                    </div>
+                    <div class="col">
+                        <!-- right div -->
+                    </div>
+            
+                    <div id="res-summary">
+                        <div id="res" class="sentence">
+                            
+                        </div>
+                    </div>
             </div>
-            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-        
-            <div class = "chartCard">
-                <table id = "myTable">
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Value</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableData">
-    
-                    </tbody>
-                </table>
-            </div>
-        </div>
 
-
-    
-        <div class="row">
-            <div class="col" id="tag">
-                <button class="btn btn-primary" id="res-btn1">Interpretation</button> <!-- REMOVE AS BUTTON -->
-            </div>
             <div class="col">
-                <!-- right div -->
-            </div>
-        </div>
-    
-        <div class="row">
-            <div id="res-summary">
-                <div id="res" class="sentence">
-                    
+                <div class="chartCard" id="boxplot">
+                    <div class="chartBox">
+                      <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            
+                <div class = "chartCard">
+                    <table id = "myTable">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableData">
+        
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
-        <div class="row">
+
+        <div class="row" style="margin-top: 30px;">
             <div class="col" id="tag">
-                <button class="btn btn-primary" id="res-btn1">Interpretation by the Physician</button> <!-- REMOVE AS BUTTON -->
+                <div class="" id="res-btn1">Interpretation by the Physician</div> <!-- REMOVE AS BUTTON -->
             </div>
             <div class="col">
                 <!-- right div -->
@@ -162,6 +157,7 @@
 
     </div>
     
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
     <script src="../js/utils/login-check.js"></script>
     <script src="../js/view/graph.js"></script>
     <script src="../js/utils/logout.js"></script>
