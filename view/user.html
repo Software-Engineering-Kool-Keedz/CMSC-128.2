@@ -50,7 +50,7 @@
     </nav>
     
 
-    <!-- ExplainableAI Page CONTENTS -->
+    <!-- User Page CONTENTS -->
     <div class="container text-center">
         <p class = "h1"> USER PAGE</p>
         <div class="row">
@@ -63,25 +63,32 @@
             </div>
         </div>
 
-        <div class="search-patient-table">
-            <table class="recordsTable" cellspacing="0">
-                <thead>
-                    <tr class="records-table-header">
-                        <th id="first-col">ID</th>
-                        <th>Username</th>
-                        <th>Role</th>
-                    </tr>
-                </thead>
-
-                <tbody id="tableData">
-
-                </tbody>
-            </table>
+        <div class="row">
+            <div id="res-summary">
+                <div class="search-patient-table">
+                    <table class="recordsTable" cellspacing="0">
+                        <thead>
+                            <tr class="records-table-header">
+                                <th id="first-col">ID</th>
+                                <th>Username</th>
+                                <th>Role</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody id="tableData">
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
+
+
 
         <div class="row">
             <div class="col" id="tag">
-                <button class="btn btn-primary" id="res-btn1">User</button> <!-- REMOVE AS BUTTON -->
+                <button class="btn btn-primary" id="res-btn3">User</button> <!-- REMOVE AS BUTTON -->
             </div>
             <div class="col">
                 <!-- right div -->
@@ -90,34 +97,40 @@
     
         <div class="row">
             <div id="res-summary">
-                <div id="res">
-                    <div class="input">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label for="username" class="form-label"> Username</label>
-                                <input type="text" id="username" class="form-control">
-                            </div>
-                    
-                            <div class="col-md-4">
-                                <label for="password" class="form-label">Password</label>
-                                <input type="text" id="password" class="form-control">
-                            </div>
-                    
-                            <div class="col-md-4">
-                                <label for="ROLE" class="">Role</label>
-                                <select id="role" class="form-select">
-                                    <option value="" disabled selected>Choose...</option>
-                                    <option value="administrator">Admin</option>
-                                    <option value="physician">Physician</option>
-                                </select>
-                            </div>
-                        </div>
+              <div id="res">
+                <div class="input">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label for="username" class="form-label">Username</label>
+                      <input type="text" id="username" class="form-control">
                     </div>
+          
+                    <div class="col-md-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="text" id="password" class="form-control">
+                    </div>
+          
+                    <div class="col-md-3">
+                      <label for="ROLE" class="">Role</label>
+                      <select id="role" class="form-select">
+                        <option value="" disabled selected>Choose...</option>
+                        <option value="administrator">Admin</option>
+                        <option value="physician">Physician</option>
+                      </select>
+                    </div>
+                    
+                    <div class="col-md-3">
+                      <button class="add-btn btn btn-primary btn-block mb-4" id="res-btn1">Add</button>
+                    </div>
+          
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+          
+          
 
-        <button class="add-btn btn btn-primary btn-block mb-4">Add</button>
 
     </div>
 

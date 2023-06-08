@@ -1,3 +1,51 @@
+/* NAVBAR */
+.navbar {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+    background-color: transparent;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-logo {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.nav-item {
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: black;
+    font-size: 15px;
+}
+
+#logout {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    color: black;
+    width: 100px;
+    height: 40px;
+}
+
+#logout:hover {
+    background-color: black;
+    color: white;
+}
+
+/* END NAVBAR */
+
+/* BODY */
 table {
     border-collapse: collapse;
 }
@@ -12,7 +60,7 @@ table {
 }
 
 .records-table-header {
-    background-color: #3476CE;
+    background-color: black;
     color: #fff;
     font-size: 12px;
     height: 50px;
@@ -38,4 +86,26 @@ tbody {
     font-size: 12px;
     text-align: center;
     color: #3B3C3E;
+}
+
+#res-btn1, #res-btn3 {
+    border-color: black;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#res-btn1:hover, #res-btn2:hover{
+    background-color: white;
+    color: black;
+}
+
+#res-summary {
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
 }
