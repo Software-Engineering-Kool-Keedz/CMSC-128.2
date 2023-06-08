@@ -4,11 +4,11 @@ search_button.addEventListener('click', () => {
     const first_name = document.querySelector('.firstname').value
     const last_name = document.querySelector('.lastname').value
     var search_string = ''
-    if (first_name != '') search_string += `part1.first_name=${first_name}`
-    if (last_name != '' && first_name === '') search_string += `part1.last_name=${last_name}`
-    else if (last_name != '' && first_name != '') search_string += `&part1.last_name=${last_name}`
+    if (first_name != '') search_string += `patient_record.first_name=${first_name}`
+    if (last_name != '' && first_name === '') search_string += `patient_record.last_name=${last_name}`
+    else if (last_name != '' && first_name != '') search_string += `&patient_record.last_name=${last_name}`
     if (search_string != ''){
-        fetch(`/request/patient?${search_string}`, {
+        fetch(`/get/patient_record?${search_string}`, {
             method: 'GET',
             headers: new Headers({'Content-Type': 'application/json'})
         })
@@ -39,7 +39,7 @@ search_button.addEventListener('click', () => {
                 col_2.scope = 'col'
                 col_3.scope = 'col'
                 col_4.scope = 'col'
-                col_1.innerHTML = 'Patient Code'
+                col_1.innerHTML = 'Record Number'
                 col_2.innerHTML = 'First Name'
                 col_3.innerHTML = 'Last Name'
                 col_4.innerHTML = 'Action'
@@ -47,7 +47,7 @@ search_button.addEventListener('click', () => {
                 for(let i = 0; i < data.length; i++){
                     const tbl_row = document.createElement('tr')
                     tbl_row.innerHTML = `
-                    <th scope='col'>${data[i].patient_code}</th>
+                    <th scope='col'>${data[i].record_no}</th>
                     <td>${data[i].first_name}</td>
                     <td>${data[i].last_name}</td>
                     `
@@ -56,11 +56,10 @@ search_button.addEventListener('click', () => {
                     btn.innerHTML = 'View Patient Information'
                     btn.className = 'btn btn-outline-secondary mb-3'
                     btn.addEventListener('click', () => {
-                        sessionStorage.setItem('patient_code', data[i].patient_code)
+                        sessionStorage.setItem('patient_code', data[i].record_no)
                         sessionStorage.setItem('first_name', data[i].first_name)
                         sessionStorage.setItem('last_name', data[i].last_name)
                         location.href = '/view-patient'
-
                     })
                     btn_container.appendChild(btn)
                     tbl_row.appendChild(btn_container)
