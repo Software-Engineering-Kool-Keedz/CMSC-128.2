@@ -10,67 +10,67 @@ window.onload = () => {
         const basic = document.querySelector('.basic-info')
 
         basic.innerHTML = `
-        <p>Name: ${data[0][0]['first_name'] + " " + data[0][0]['last_name']}</p>
-        <p>Age Range: ${data[0][0]['AGERNG']}</p>
-        <p>Gender: ${data[0][0]['GENDER']}</p>
-        <p>Marital Status: ${data[0][0]['MARSTS']}</p>
-        <p>Educational Attainment: ${data[0][0]['EDU']}</p>
-        <p>Profession: ${data[0][0]['PROF']}</p>
-        <p>Type Residence: ${data[0][0]['RESDPL']}</p>
+        <p><b>Name:</b> ${data[0][0]['first_name'] + " " + data[0][0]['last_name']}</p>
+        <p><b>Age Range:</b> ${data[0][0]['AGERNG']}</p>
+        <p><b>Gender:</b> ${data[0][0]['GENDER']}</p>
+        <p><b>Marital Status:</b> ${data[0][0]['MARSTS']}</p>
+        <p><b>Educational Attainment:</b> ${data[0][0]['EDU']}</p>
+        <p><b>Profession:</b> ${data[0][0]['PROF']}</p>
+        <p><b>Type Residence:</b> ${data[0][0]['RESDPL']}</p>
         `
         const physical = document.querySelector('.physical-health')
 
         physical.innerHTML = `
-        <p>Physical Exercise: ${data[0][0]['PHYEX']}</p>
-        <p>With Illnes? ${data[0][0]['ILLNESS']}</p>
-        <p>Has Insomnia? ${data[0][0]['INSOM']}</p>
-        <p>Average Sleep Hours: ${data[0][0]['AVGSLP']}</p>
-        <p>Smoker? ${data[0][0]['SMOKE']}</p>
-        <p>Alchohol Drinker? ${data[0][0]['DRINK']}</p>
-        <p>Taking Prescribed Medicine? ${data[0][0]['PREMED']}</p>
+        <p><b>Physical Exercise:</b> ${data[0][0]['PHYEX']}</p>
+        <p><b>With Illnes?</b> ${data[0][0]['ILLNESS']}</p>
+        <p><b>Has Insomnia?</b> ${data[0][0]['INSOM']}</p>
+        <p><b>Average Sleep Hours:</b> ${data[0][0]['AVGSLP']}</p>
+        <p><b>Smoker?</b> ${data[0][0]['SMOKE']}</p>
+        <p><b>Alchohol Drinker?</b> ${data[0][0]['DRINK']}</p>
+        <p><b>Taking Prescribed Medicine?</b> ${data[0][0]['PREMED']}</p>
         `
 
         const social = document.querySelector('.social-relationship')
 
         social.innerHTML = `
-        <p>Lives with Family or Not? ${data[0][0]['LIVWTH']}</p>
-        <p>In Conflict with Family or Friends? ${data[0][0]['CONFLICT']}</p>
-        <p>Satisfied with Environment? ${data[0][0]['ENVSAT']}</p>
-        <p>Faced threat? ${data[0][0]['THREAT']}</p>
-        <p>Lost Someone? ${data[0][0]['LOST']}</p>
-        <p>Average Hours in Social Network ${data[0][0]['TSSN']}</p>
-        <p>Felt Cheated? ${data[0][0]['CHEAT']}</p>
-        <p>Felt Abused? ${data[0][0]['ABUSED']}</p>
+        <p><b>Lives with Family or Not?</b> ${data[0][0]['LIVWTH']}</p>
+        <p><b>In Conflict with Family or Friends?</b> ${data[0][0]['CONFLICT']}</p>
+        <p><b>Satisfied with Environment?</b> ${data[0][0]['ENVSAT']}</p>
+        <p><b>Faced threat?</b> ${data[0][0]['THREAT']}</p>
+        <p><b>Lost Someone?</b> ${data[0][0]['LOST']}</p>
+        <p><b>Average Hours in Social Network</b> ${data[0][0]['TSSN']}</p>
+        <p><b>Felt Cheated?</b> ${data[0][0]['CHEAT']}</p>
+        <p><b>Felt Abused?</b> ${data[0][0]['ABUSED']}</p>
         `
 
         const financial = document.querySelector('.financial')
 
         financial.innerHTML = `
-        <p>Had Debt? ${data[0][0]['DEBT']}</p>
-        <p>Financially Stressed? ${data[0][0]['FINSTR']}</p>
+        <p><b>Had Debt?</b> ${data[0][0]['DEBT']}</p>
+        <p><b>Financially Stressed?</b> ${data[0][0]['FINSTR']}</p>
         `
 
         const psychological = document.querySelector('.psychological')
 
         psychological.innerHTML = `
-        <p>Feels Anxiety? ${data[0][0]['ANXI']}</p>
-        <p>Feels Deprived? ${data[0][0]['DEPRI']}</p>
-        <p>Satisfied with Current Position or Achievements? ${data[0][0]['POSSAT']}</p>
-        <p>With Inferiority Complex? ${data[0][0]['INFER']}</p>
-        <p>Having Suicidal Thoughts? ${data[0][0]['SUICIDE']}</p>
-        <p>Has Work/Study Pressure? ${data[0][0]['WRKPRE']}</p>
-        <p>Has eating Disorder? ${data[0][0]['EATDIS']}</p>
+        <p><b>Feels Anxiety?</b> ${data[0][0]['ANXI']}</p>
+        <p><b>Feels Deprived?</b> ${data[0][0]['DEPRI']}</p>
+        <p><b>Satisfied with Current Position or Achievements?</b> ${data[0][0]['POSSAT']}</p>
+        <p><b>With Inferiority Complex?</b> ${data[0][0]['INFER']}</p>
+        <p><b>Having Suicidal Thoughts?</b> ${data[0][0]['SUICIDE']}</p>
+        <p><b>Has Work/Study Pressure?</b> ${data[0][0]['WRKPRE']}</p>
+        <p><b>Has eating Disorder?</b> ${data[0][0]['EATDIS']}</p>
         `
         const ai = document.querySelector('.ai')
 
         ai.innerHTML = `
-        <p>AI Prediction: ${((data[0][0]['DEPRESSED'])? "Depressed":"Not Depressed")}</p>
+        <p><b>AI Prediction:</b> ${((data[0][0]['DEPRESSED'])? "Depressed":"Not Depressed")}</p>
         `
 
         const final = document.querySelector('.final')
 
         final.innerHTML = `
-        <p>Physician's Final Diagnosis: ${(data[1][0]['EVALUATION'])? "Depressed": ((data[1][0]['EVALUATION'] == false)? "Not Depressed": "To be evaluated")}</p>
+        <p><b>Physician's Final Diagnosis:</b> ${(data[1][0]['EVALUATION'])? "Depressed": ((data[1][0]['EVALUATION'] == false)? "Not Depressed": "To be evaluated")}</p>
         <div class="row">
             <div class="col edit-btn-cont" style="display:block">
                 <a class="btn btn-outline-secondary mb-3 edit" id="edit" >Edit</a>

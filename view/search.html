@@ -17,7 +17,7 @@
     <!-- NAV BAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a href="" class="navbar-brand"> <img src="../img/logo.png" alt=""> <span class="nav-logo">WEBSITE</span></a>
+            <a href="" class="navbar-brand"> <img src="../img/logo.png" alt=""> <span class="nav-logo">DAISo</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,7 +33,7 @@
                         <a class="nav-link" href="/form">Form</a> <!-- To insert link here-->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/result">Result</a> <!-- To insert link here-->
+                        <a class="nav-link" href="/users" id="adminonly">Users</a> <!-- To insert link here-->
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
@@ -52,7 +52,7 @@
         <p class = "h1">SEARCH PATIENT</p>
 
         <div class="row">
-            <div class="col">
+            <div class="col" style="width: 1100px; margin: 0 auto;">
                 Search Patient page allows you to locate patient records by first name or last name.
                 Simply enter the patient's name into the search bar below to retrieve the records associated with the name to be searched.
                 Streamline your workflow and access the information you need in seconds with this page.
@@ -76,11 +76,6 @@
             </div>
         </div>
 
-        <!--Search result-->
-        <div class="sections">
-            <span class="label" id="section-title">SEARCH RESULTS</span>
-        </div>
-
         <!--Try from HI *copy paste*-->
         <div class="card search-res" style="margin: 10px; display: none;">
             <h5 class="card-header">Search Results</h5>
@@ -91,6 +86,7 @@
     <script src="../js/utils/login-check.js"></script>
     <script src="../js/utils/logout.js"></script>
     <script src="../js/utils/flash-username.js"></script>
+    <script src="../js/utils/admin-dashboard-check.js"></script>
 </body>
 <script src="../js/view/search.js"></script>
 </html>

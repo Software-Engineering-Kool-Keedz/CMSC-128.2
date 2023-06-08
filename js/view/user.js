@@ -15,6 +15,7 @@ window.onload = () => {
             if(data[i].role != 'administrator'){
                 const btn = document.createElement('button')
             btn.innerHTML = 'Delete'
+            btn.className = 'delete-btn'
             btn.addEventListener('click', () => {
                 fetch(`/delete/user/${data[i].id}`, {
                     method: 'DELETE',
@@ -38,7 +39,7 @@ window.onload = () => {
     })
 }
 
-const username = document.querySelector('#username')
+const usernamed = document.querySelector('#usernameA')
 const password = document.querySelector('#password')
 const role = document.querySelector('#role')
 
@@ -48,7 +49,7 @@ addBtn.addEventListener('click', () =>{
         method: 'POST',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify({
-            username: username.value,
+            username: usernamed.value,
             password: password.value,
             role: role.value
         })
@@ -56,7 +57,7 @@ addBtn.addEventListener('click', () =>{
     .then((res) => res.json())
     .then((response) => {
         if(response[0].event == 'add-user error'){
-            alert(`username ${username.value} is already added`)
+            alert(`username ${usernamed.value} is already added`)
         }
         else window.location.reload()
     })

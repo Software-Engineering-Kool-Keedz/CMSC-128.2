@@ -13,8 +13,8 @@ router.get('/patient_record', (req, res) => {
              builder.whereILike('patient_record.first_name', `${req.query['patient_record.first_name']}%`)
              .andWhereILike('patient_record.last_name', `${req.query['patient_record.last_name']}%`);
         }
-        else if(req.query['patient_record.last_name']) builder.whereILike('patient_record.last_name', `${req.query['patient_record.last_name']}%`);
-        else if(req.query['patient_record.first_name']) builder.whereILike('patient_record.first_name', `${req.query['patient_record.first_name']}%`);
+        else if(req.query['patient_record.last_name']) builder.whereILike('patient_record.last_name', `%${req.query['patient_record.last_name']}%`);
+        else if(req.query['patient_record.first_name']) builder.whereILike('patient_record.first_name', `%${req.query['patient_record.first_name']}%`);
     })
     .orderBy('patient_record.created_at', 'asc')
     .returning()

@@ -113,14 +113,14 @@
       else if (abbr === 'TSSN') return 'Average Hours in Social Network'
       else if (abbr === 'WRKPRE') return 'Has Work/Study Pressure'
       else if (abbr === 'ANXI') return 'Feels Anxiety'
-      else if (abbr === 'DEPRI') return ''
-      else if (abbr === 'ABUSED') return ''
-      else if (abbr === 'CHEAT') return ''
-      else if (abbr === 'THREAT') return ''
-      else if (abbr === 'SUICIDE') return ''
-      else if (abbr === 'INFER') return ''
-      else if (abbr === 'CONFLICT') return ''
-
+      else if (abbr === 'DEPRI') return 'Feels Deprived'
+      else if (abbr === 'ABUSED') return 'Felt Abused'
+      else if (abbr === 'CHEAT') return 'Felt Cheated'
+      else if (abbr === 'THREAT') return 'Faced Threat'
+      else if (abbr === 'SUICIDE') return 'Sucidal Thoughts'
+      else if (abbr === 'INFER') return 'Inferiority Complex'
+      else if (abbr === 'CONFLICT') return 'In Conflit with Family or Friends'
+      else if (abbr === 'LOST') return 'Lost Someone'
     }
     
     // setup 
