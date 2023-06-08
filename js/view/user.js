@@ -12,6 +12,27 @@ window.onload = () => {
             <th>${data[i].id}</th>
             <td>${data[i].username}</td>
             <td>${data[i].role}</td>`
+            if(data[i].role != 'administrator'){
+                const btn = document.createElement('button')
+            btn.innerHTML = 'Delete'
+            btn.addEventListener('click', () => {
+                fetch(`/delete/user/${data[i].id}`, {
+                    method: 'DELETE',
+                    headers: new Headers({'Content-Type': 'application/json'})
+                })
+                .then((res) => res.json())
+                .then((data) => {
+                    if(data[0].event === 'delete success') {
+                        alert('deleted successfully')
+                        window.location.reload()
+                    }
+                    else alert('failed to delete')
+                })
+            })
+            const td = document.createElement('td')
+            td.appendChild(btn)
+            tdata.appendChild(td)
+            }
             tableBody.appendChild(tdata)
         }  
     })

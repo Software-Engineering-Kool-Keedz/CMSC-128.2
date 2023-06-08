@@ -333,9 +333,9 @@ const initialize = async (db) => {
                         role: 'administrator'
                     },
                     {
-                        username: 'doctor',
+                        username: 'physician',
                         password: encrypt(process.env.ENC_PASS),
-                        role: 'doctor'
+                        role: 'physician'
                     }])
                 })
             }
@@ -352,7 +352,7 @@ const initialize = async (db) => {
                     t.string('first_name')
                     t.string('last_name')
                     t.integer('encoder_id')
-                    t.foreign('encoder_id').references('user.id')
+                    t.foreign('encoder_id').references('user.id').onDelete('SET NULL')
                     t.string('AGERNG')
                     t.string('GENDER')
                     t.string('EDU')
@@ -399,7 +399,7 @@ const initialize = async (db) => {
                 await db.schema.createTable('patient_record_ai_results', (t) => {
                     t.increments('ai_results_no').primary().unique()
                     t.integer('record_no')
-                    t.foreign('record_no').references('patient_record.record_no')
+                    t.foreign('record_no').references('patient_record.record_no').onDelete('CASCADE')
                     t.float('NO')
                     t.float('YES')
                     t.text('FEATURES')
@@ -417,7 +417,7 @@ const initialize = async (db) => {
                 await db.schema.createTable('patient_record_evaluation', (t) => {
                     t.increments('eval_no').primary().unique()
                     t.integer('record_no')
-                    t.foreign('record_no').references('patient_record.record_no')
+                    t.foreign('record_no').references('patient_record.record_no').onDelete('CASCADE')
                     t.boolean('EVALUATION')
                 })
                 .then(console.log('patient record evaluation created successfully'))

@@ -48,8 +48,21 @@
 
 /* BODY */
 
+.h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#form-description {
+    text-align: left;
+}
+
+p {
+    text-indent: 50px;
+}
+
 .sections {
-    margin-top: 50px;
+    margin-top: 10px;
     justify-content: left;
     display: inline-flex;
 }
@@ -83,6 +96,7 @@
     /* width: 98.3%; */
     padding: 20px;
     margin-top: 20px;
+    margin-bottom: 50px;
     border: 2px solid;
     border-radius: 10px;
 }

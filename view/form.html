@@ -39,7 +39,7 @@
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <span class="msg">Logged in as <b>USERNAME</b></span>
+                        <span class="msg">Logged in as <b id="username"></b></span>
                     </li>
                     <li class="nav-item">
                         <button type="submit" class="btn btn-primary" id="logout">Logout</button> <!-- BUTTON NOT PROPERLY PLACED -->
@@ -51,13 +51,16 @@
 
     <div class="container text-center">
         <p class = "h1">FORM PAGE</p>
-        <div class="row">
-            <div class="col">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                deserunt mollit anim id est laborum."
+        <div class="row" style="width: 1100px; margin: 10px;">
+            <div class="col" id="form-description">
+                <p>This section will collect patient information: basic information, physical health, social and
+                relationship circumstances, financial circumstance, and psychological well-being. The information inputted
+                will be saved as a record that will be run on the machine learning model, Logistic Regression. From the data provided,
+                the system will return a diagnosis based on the different attributes that may imply whether the patient has depression
+                or not.</p>
+                <p> In compliance with the <b>Data Privacy Act of 2012</b> or <b>Republic Act 10173</b>, and its Implementing Rules and Regulations (IRR),
+                all data collected shall be treated with utmost privacy and confidentiality. Necessary precautions will be taken
+                by the DAISo team to protect personal information inputted in this system.</p>
             </div>
         </div>
 
@@ -650,6 +653,8 @@
     </div>
     
     <script src="../js/utils/login-check.js"></script>
+    <script src="../js/utils/logout.js"></script>
+    <script src="../js/utils/flash-username.js"></script>
     <script src="../js/view/form.js"></script>
 </body>
 </html>

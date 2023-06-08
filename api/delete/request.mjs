@@ -6,12 +6,14 @@ const express = require('express');
 const router = express.Router();
 
 router.delete('/user/:id', async (req, res) => {
+    console.log(req.params.id);
     const userID = req.params.id;
     await db('user').where('id', userID).del()
     .then(() => {
         res.json([{'event': 'delete success'}])
     })
     .catch((err) => {
+        console.log(err)
         res.json([{'event': 'delete fail'}])
     })
 })

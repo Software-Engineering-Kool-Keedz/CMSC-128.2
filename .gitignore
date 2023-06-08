@@ -1,8 +1,6 @@
 /node_modules
 cmd-lines.txt
 /py/__pycache__
-/py/dataset.csv
-/py/dataset-nodup.csv
 /py/lr-model.py
 /venv
 .env
