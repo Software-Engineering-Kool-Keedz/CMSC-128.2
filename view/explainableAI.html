@@ -25,16 +25,16 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a> <!-- To insert link here-->
+                        <a class="nav-link" href="/">Home</a> <!-- To insert link here-->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Search</a> <!-- To insert link here-->
+                        <a class="nav-link" href="/search">Search</a> <!-- To insert link here-->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Form</a> <!-- To insert link here-->
+                        <a class="nav-link" href="/form">Form</a> <!-- To insert link here-->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Result</a> <!-- To insert link here-->
+                        <a class="nav-link" href="/result">Result</a> <!-- To insert link here-->
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
@@ -64,9 +64,29 @@
         </div>
 
         <div class ="row">
-            <div class="col" id="illustration"></div>
-            <div class="col" id="illustration"></div>
+            <div class="chartCard">
+                <div class="chartBox">
+                  <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+        
+            <div class = "chartCard">
+                <table id = "myTable">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    
+                    </tbody>
+                </table>
+            </div>
         </div>
+
+
     
         <div class="row">
             <div class="col" id="tag">
@@ -110,7 +130,7 @@
             </div>
         </div>
 
-        <div class="sections">
+        <!-- <div class="sections">
             <span class="label" id="section-title">EVALUATION</span>
         </div>
 
@@ -142,14 +162,12 @@
                     </div>
                 </div>        
             </div>
-        </div>
+        </div> -->
 
     </div>
-
-
     
-    
-
     <script src="../js/utils/login-check.js"></script>
+    <script src="../js/view/graph.js"></script>
+    <script src="../js/view/results.js"></script>
 </body>
 </html>
