@@ -406,6 +406,7 @@ function saveRec() {
         if (data[0].event == 'input error') alert('Input error')
         else {
             alert('Moving to result page')
+            sessionStorage.setItem('recordno', data[0].record_no)
             location.href = '/result'
         }
     })

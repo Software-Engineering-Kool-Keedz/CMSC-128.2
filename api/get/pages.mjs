@@ -34,4 +34,8 @@ router.get('/login', (req, res) => {
     res.sendFile(path.join(__root, '/view/login.html'))
 })
 
+router.get('/record', (req, res) => {
+    res.sendFile(path.join(__root, '/view/record.html'))
+})
+
 export default router

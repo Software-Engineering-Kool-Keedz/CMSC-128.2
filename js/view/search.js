@@ -56,7 +56,7 @@ search_button.addEventListener('click', () => {
                     btn.innerHTML = 'View Patient Information'
                     btn.className = 'btn btn-outline-secondary mb-3'
                     btn.addEventListener('click', () => {
-                        sessionStorage.setItem('patient_code', data[i].record_no)
+                        sessionStorage.setItem('record_no', data[i].record_no)
                         sessionStorage.setItem('first_name', data[i].first_name)
                         sessionStorage.setItem('last_name', data[i].last_name)
                         location.href = '/view-patient'

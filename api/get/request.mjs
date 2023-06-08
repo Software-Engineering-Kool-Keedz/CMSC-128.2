@@ -30,4 +30,24 @@ router.get('/users', (req, res) => {
         res.json(data);
     })
 })
+
+router.get('/record/:record_no', async (req, res) => {
+    const record = req.params.record_no;
+    var resJSON = []
+    await db('patient_record').select()
+    .where('record_no', record)
+    .returning()
+    .then((data) => {
+        resJSON.push(data)
+    })
+    .then(async () => {
+        await db('patient_record_evaluation').select(['EVALUATION'])
+        .where('record_no', record)
+        .returning()
+        .then((data) => {
+            resJSON.push(data)
+            res.json(resJSON)
+        })
+    })
+})
 export default router
