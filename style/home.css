@@ -1,9 +1,9 @@
 body {
     background-image: url('../img/home-bg.png');
     background-repeat: no-repeat;
-    background-size: 62%;
+    background-size: 60%;
     background-position: right;
-    background-position-y: 150px;
+    background-position-y: 100px;
 }
 
 /* NAVBAR */
@@ -56,17 +56,22 @@ body {
 
 /* Body */
 .container {
-    margin-top: 20%;
-    margin-bottom: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     margin-left: -1%;
 }
 
 #descrip {
-    font-size: 15px;
+    font-size: 18px;
+    margin-left: 5%;
+}
+
+.description {
+    width: 450px;
 }
 
 #second-container {
-    margin-top: 310px;
+    margin-top: 150px;
     margin-left: -12%;
 }
 
