@@ -65,6 +65,7 @@ p {
     margin-top: 10px;
     justify-content: left;
     display: inline-flex;
+    width: 100%;
 }
 
 .label {
@@ -73,6 +74,10 @@ p {
     font-size: 20px;
     color: white;
     border-radius: 10px;
+}
+
+.form-check-label {
+    margin-right: 10px;
 }
 
 #section-number {

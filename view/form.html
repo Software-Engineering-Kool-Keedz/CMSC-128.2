@@ -100,19 +100,17 @@
                 </div>
         
                 <div class="col-md-4">
-                    <label for="middle-name" class="form-label">Middle Name</label>
-                    <input type="text" id="middle-name" class="form-control">
+                    <label for="last-name" class="form-label">Last Name</label>
+                    <input type="text" id="last-name" class="form-control">
 
                     <label for="GENDER" class="">Gender</label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="d-flex justify-content-center">
                                 <div class="form-check">
                                     <input type="radio" name="GENDER" id="gender-male" value="male" class="form-check-input" onclick="select_gender()">
                                     <label for="gender-male" class="form-check-label">Male</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="GENDER" id="gender-female" value="female" class="form-check-input" onclick="select_gender()">
                                     <label for="gender-female" class="form-check-label">Female</label>
@@ -133,10 +131,7 @@
                     </select>
                 </div>
         
-                <div class="col-md-4">
-                    <label for="last-name" class="form-label">Last Name</label>
-                    <input type="text" id="last-name" class="form-control">
-                    
+                <div class="col-md-4">                    
                     <label for="MARSTS" class="">Marital Status</label>
                     <select id="MARSTS" class="form-select">
                         <option value="" disabled selected>Choose...</option>
@@ -185,13 +180,11 @@
                     <label for="PREMED" class="">Taking Prescribed Med (PREMED)</label>
                         <div class="radio-options">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="d-flex justify-content-center">
                                     <div class="form-check">
                                         <input type="radio" name="PREMED" id="premed-yes" value="yes" class="form-check-input" onclick="select_premed()">
                                         <label for="premed-yes" class="form-check-label">Yes</label>
                                     </div>
-                                </div>
-                                <div class="col-6">
                                     <div class="form-check">
                                         <input type="radio" name="PREMED" id="premed-no" value="no" class="form-check-input" onclick="select_premed()">
                                         <label for="premed-no" class="form-check-label">No</label>
@@ -205,13 +198,11 @@
                     <label for="ILLNESS" class="">With Illness</label>
                         <div class="radio-options">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="d-flex justify-content-center">
                                     <div class="form-check">
                                         <input type="radio" name="ILLNESS" id="illness-yes" value="yes" class="form-check-input" onclick="select_illness()">
                                         <label for="illness-yes" class="form-check-label">Yes</label>
                                     </div>
-                                </div>
-                                <div class="col-6">
                                     <div class="form-check">
                                         <input type="radio" name="ILLNESS" id="illness-no" value="no" class="form-check-input" onclick="select_illness()">
                                         <label for="illness-no" class="form-check-label">No</label>
@@ -223,13 +214,11 @@
                     <label for="SMOKE" class="">Smoker</label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="d-flex justify-content-center">
                                 <div class="form-check">
                                     <input type="radio" name="SMOKER" id="smoker-yes" value="yes" class="form-check-input" onclick="select_smoker()">
                                     <label for="smoker-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="SMOKER" id="smoker-no" value="no" class="form-check-input" onclick="select_smoker()">
                                     <label for="smoker-no" class="form-check-label">No</label>
@@ -243,13 +232,10 @@
                     <label for="INSOM" class="">Has Insomnia</label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
-                                <div class="form-check">
+                            <div class="d-flex justify-content-center">                                <div class="form-check">
                                     <input type="radio" name="INSOMNIA" id="insomnia-yes" value="yes" class="form-check-input" onclick="select_insom()">
                                     <label for="insomnia-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="INSOMNIA" id="insomnia-no" value="no" class="form-check-input" onclick="select_insom()">
                                     <label for="insomnia-no" class="form-check-label">No</label>
@@ -261,13 +247,11 @@
                     <label for="DRINK" class="">Alcohol Drinker</label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="d-flex justify-content-center">
                                 <div class="form-check">
                                     <input type="radio" name="DRINK" id="drinker-yes" value="yes" class="form-check-input" onclick="select_drink()">
                                     <label for="drinker-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="DRINK" id="drinker-no" value="no" class="form-check-input" onclick="select_drink()">
                                     <label for="drinker-no" class="form-check-label">No</label>
@@ -284,18 +268,15 @@
         </div>
 
         <div class="input">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-4">
                     <label for="LIVWITH" class="">Lives with Family or not (LIVWTH)</label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
-                                <div class="form-check">
+                            <div class="d-flex justify-content-center">                                <div class="form-check">
                                     <input type="radio" name="LIVWITH" id="livwith-yes" value="yes" class="form-check-input" onclick="select_livwith()">
                                     <label for="livwith-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="LIVWITH" id="livwith-no" value="no" class="form-check-input" onclick="select_livwith()">
                                     <label for="livwith-no" class="form-check-label">No</label>
@@ -307,13 +288,10 @@
                     <label for="THREAT" class="">Faced threat (THREAT) </label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
-                                <div class="form-check">
+                            <div class="d-flex justify-content-center">                                <div class="form-check">
                                     <input type="radio" name="THREAT" id="threat-yes" value="yes" class="form-check-input" onclick="select_threat()">
                                     <label for="threat-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="THREAT" id="threat-no" value="no" class="form-check-input" onclick="select_threat()">
                                     <label for="threat-no" class="form-check-label">No</label>
@@ -325,13 +303,10 @@
                     <label for="CHEAT" class="">Felt Cheated (CHEAT) </label>
                         <div class="radio-options">
                             <div class="row">
-                                <div class="col-6">
-                                    <div class="form-check">
+                                <div class="d-flex justify-content-center">                                    <div class="form-check">
                                         <input type="radio" name="CHEAT" id="cheat-yes" value="yes" class="form-check-input" onclick="select_cheat()">
                                         <label for="cheat-yes" class="form-check-label">Yes</label>
                                     </div>
-                                </div>
-                                <div class="col-6">
                                     <div class="form-check">
                                         <input type="radio" name="CHEAT" id="cheat-no" value="no" class="form-check-input" onclick="select_cheat()">
                                         <label for="cheat-no" class="form-check-label">No</label>
@@ -345,13 +320,10 @@
                     <label for="CONFLICT" class="">In Conflict with Family or Friends (CONFLICT) </label>
                         <div class="radio-options">
                             <div class="row">
-                                <div class="col-6">
-                                    <div class="form-check">
+                                <div class="d-flex justify-content-center">                                    <div class="form-check">
                                         <input type="radio" name="CONFLICT" id="conflict-yes" value="yes" class="form-check-input" onclick="select_conflict()">
                                         <label for="conflict-yes" class="form-check-label">Yes</label>
                                     </div>
-                                </div>
-                                <div class="col-6">
                                     <div class="form-check">
                                         <input type="radio" name="CONFLICT" id="conflict-no" value="no" class="form-check-input" onclick="select_conflict()">
                                         <label for="conflict-no" class="form-check-label">No</label>
@@ -363,13 +335,11 @@
                     <label for="LOST" class="">Lost Someone (LOST) </label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="d-flex justify-content-center">
                                 <div class="form-check">
                                     <input type="radio" name="LOST" id="lost-yes" value="yes" class="form-check-input" onclick="select_lost()">
                                     <label for="lost-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="LOST" id="lost-no" value="no" class="form-check-input" onclick="select_lost()">
                                     <label for="lost-no" class="form-check-label">No</label>
@@ -381,13 +351,11 @@
                     <label for="ABUSED" class="">Felt Abused (ABUSED) </label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="d-flex justify-content-center">
                                 <div class="form-check">
                                     <input type="radio" name="ABUSED" id="abused-yes" value="yes" class="form-check-input" onclick="select_abused()">
                                     <label for="abused-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="ABUSED" id="abused-no" value="no" class="form-check-input" onclick="select_abused()">
                                     <label for="abused-no" class="form-check-label">No</label>
@@ -401,13 +369,12 @@
                     <label for="ENVSAT" class="">Satisfied with Environment (ENVSAT) </label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="d-flex justify-content-center">
                                 <div class="form-check">
                                     <input type="radio" name="ENVSAT" id="envsat-yes" value="yes" class="form-check-input" onclick="select_envsat()">
                                     <label for="envsat-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
+                            
                                 <div class="form-check">
                                     <input type="radio" name="ENVSAT" id="envsat-no" value="no" class="form-check-input" onclick="select_envsat()">
                                     <label for="envsat-no" class="form-check-label">No</label>
@@ -432,51 +399,45 @@
         <div class="sections">
             <span class="label" id="section-number">04</span> <span class="label" id="section-title">FINANCIAL CIRCUMSTANCE</span>
         </div>
-
-        <div class="input">
-            <div class="row">        
+        
+        <div class="input text-center">
+            <div class="row justify-content-center">
                 <div class="col-md-4">
-                    <label for="DEBT" class="">Had Debt (DEBT)</label>
+                    <label for="DEBT" class="label-margin">Had Debt (DEBT)</label>
                     <div class="radio-options">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="form-check">
-                                    <input type="radio" name="DEBT" id="debt-yes" value="yes" class="form-check-input" onclick="select_debt()">
-                                    <label for="debt-yes" class="form-check-label">Yes</label>
-                                </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="form-check">
+                                <input type="radio" name="DEBT" id="debt-yes" value="yes" class="form-check-input" onclick="select_debt()">
+                                <label for="debt-yes" class="form-check-label">Yes</label>
                             </div>
-                            <div class="col-6">
-                                <div class="form-check">
-                                    <input type="radio" name="DEBT" id="debt-no" value="no" class="form-check-input" onclick="select_debt()">
-                                    <label for="debt-no" class="form-check-label">No</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <label for="FINSTR" class="">Financial Stress (FINSTR) </label>
-                    <div class="radio-options">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="form-check">
-                                    <input type="radio" name="FINSTR" id="finstr-yes" value="yes" class="form-check-input" onclick="select_finstr()">
-                                    <label for="finstr-yes" class="form-check-label">Yes</label>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-check">
-                                    <input type="radio" name="FINSTR" id="finstr-no" value="no" class="form-check-input" onclick="select_finstr()">
-                                    <label for="finstr-no" class="form-check-label">No</label>
-                                </div>
+                            <div class="form-check">
+                                <input type="radio" name="DEBT" id="debt-no" value="no" class="form-check-input" onclick="select_debt()">
+                                <label for="debt-no" class="form-check-label">No</label>
                             </div>
                         </div>
                     </div>
                 </div>
         
+                <div class="col-md-4">
+                    <label for="FINSTR" class="label-margin">Financial Stress (FINSTR)</label>
+                    <div class="radio-options">
+                        <div class="d-flex justify-content-center">
+                            <div class="form-check">
+                                <input type="radio" name="FINSTR" id="finstr-yes" value="yes" class="form-check-input" onclick="select_finstr()">
+                                <label for="finstr-yes" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="FINSTR" id="finstr-no" value="no" class="form-check-input" onclick="select_finstr()">
+                                <label for="finstr-no" class="form-check-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        
+        
+        
         
 
         <div class="sections">
@@ -489,13 +450,11 @@
                     <label for="ANXI" class="">Feels Anxiety (ANXI)</label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="d-flex justify-content-center">
                                 <div class="form-check">
                                     <input type="radio" name="ANXI" id="anxiety-yes" value="yes" class="form-check-input" onclick="select_anxi()">
                                     <label for="anxiety-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="ANXI" id="anxiety-no" value="no" class="form-check-input" onclick="select_anxi()">
                                     <label for="anxiety-no" class="form-check-label">No</label>
@@ -507,13 +466,11 @@
                     <label for="INFER" class="">Inferiority Complex (INFER)</label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="d-flex justify-content-center">
                                 <div class="form-check">
                                     <input type="radio" name="INFER" id="infer-yes" value="yes" class="form-check-input" onclick="select_infer()">
                                     <label for="infer-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="INFER" id="infer-no" value="no" class="form-check-input" onclick="select_infer()">
                                     <label for="infer-no" class="form-check-label">No</label>
@@ -525,13 +482,11 @@
                     <label for="EATDIS" class="">Has Eating Disorder (EATDIS) </label>
                         <div class="radio-options">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="d-flex justify-content-center">
                                     <div class="form-check">
                                         <input type="radio" name="EATDIS" id="eatdis-yes" value="yes" class="form-check-input" onclick="select_eatdis()">
                                         <label for="eatdis-yes" class="form-check-label">Yes</label>
                                     </div>
-                                </div>
-                                <div class="col-6">
                                     <div class="form-check">
                                         <input type="radio" name="EATDIS" id="eatdis-no" value="no" class="form-check-input" onclick="select_eatdis()">
                                         <label for="eatdis-no" class="form-check-label">No</label>
@@ -545,13 +500,11 @@
                     <label for="DEPRI" class="">Feels Deprived (DEPRI) </label>
                         <div class="radio-options">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="d-flex justify-content-center">
                                     <div class="form-check">
                                         <input type="radio" name="DEPRI" id="depri-yes" value="yes" class="form-check-input" onclick="select_depri()">
                                         <label for="depri-yes" class="form-check-label">Yes</label>
                                     </div>
-                                </div>
-                                <div class="col-6">
                                     <div class="form-check">
                                         <input type="radio" name="DEPRI" id="depri-no" value="no" class="form-check-input" onclick="select_depri()">
                                         <label for="depri-no" class="form-check-label">No</label>
@@ -563,13 +516,11 @@
                     <label for="SUICIDE" class="">Suicidal Thoughts (SUICIDE) </label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="d-flex justify-content-center">
                                 <div class="form-check">
                                     <input type="radio" name="SUICIDE" id="suicide-yes" value="yes" class="form-check-input" onclick="select_suicide()">
                                     <label for="suicide-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="SUICIDE" id="suicide-no" value="no" class="form-check-input" onclick="select_suicide()">
                                     <label for="suicide-no" class="form-check-label">No</label>
@@ -583,13 +534,11 @@
                     <label for="POSSAT" class="">Satisfied with Current Position or Achievements (POSSAT) </label>
                     <div class="radio-options">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="d-flex justify-content-center">
                                 <div class="form-check">
                                     <input type="radio" name="POSSAT" id="possat-yes" value="yes" class="form-check-input" onclick="select_possat()">
                                     <label for="possat-yes" class="form-check-label">Yes</label>
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-check">
                                     <input type="radio" name="POSSAT" id="possat-no" value="no" class="form-check-input" onclick="select_possat()">
                                     <label for="possat-no" class="form-check-label">No</label>
@@ -652,7 +601,7 @@
         </div>
     </div>
     
-    <script src="../js/utils/login-check.js"></script>
+    <!-- <script src="../js/utils/login-check.js"></script> -->
     <script src="../js/utils/logout.js"></script>
     <script src="../js/utils/flash-username.js"></script>
     <script src="../js/view/form.js"></script>
