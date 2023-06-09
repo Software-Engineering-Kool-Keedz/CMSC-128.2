@@ -52,7 +52,6 @@ router.post('/result', async (req, res) => {
             }
             idx++
         }
-        console.log(copy_body)
         //input copy body + x train + y train to explainer.py function
     })
     .then(async () => {
@@ -92,7 +91,6 @@ router.post('/result', async (req, res) => {
         var arr = resJSON.prediction.split(",")
         var zero = parseFloat(arr[0])
         var one = parseFloat(arr[1])
-        console.log(zero, one)
         var resJSON1 = {
             "NO" : zero,
             "YES" : one,

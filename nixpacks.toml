@@ -1,0 +1,4 @@
+provider = ['...', 'python3']
+
+[phases.setup]
+aptPkgs = ['...', 'libgl1']

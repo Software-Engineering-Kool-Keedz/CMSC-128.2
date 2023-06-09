@@ -59,7 +59,7 @@ search_button.addEventListener('click', () => {
                         sessionStorage.setItem('record_no', data[i].record_no)
                         sessionStorage.setItem('first_name', data[i].first_name)
                         sessionStorage.setItem('last_name', data[i].last_name)
-                        location.href = '/view-patient'
+                        location.href = '/record'
                     })
                     btn_container.appendChild(btn)
                     tbl_row.appendChild(btn_container)

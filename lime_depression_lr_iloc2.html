@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divC4E3U44J0Q67NYY"></div>
+        <div class="lime top_div" id="top_divGY4M4RYAW5PX4I7"></div>
         
         <script>
-        var top_div = d3.select('#top_divC4E3U44J0Q67NYY').classed('lime top_div', true);
+        var top_div = d3.select('#top_divGY4M4RYAW5PX4I7').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["0", "1"], [2.8678056650743855e-05, 0.9999713219433493]);
+            var pp = new lime.PredictProba(pp_svg, ["0", "1"], [0.06969732436861031, 0.9303026756313897]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["0", "1"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["-0.58 < INFER <= 1.71", 0.008896416084846544], ["POSSAT <= -1.00", 0.008834554193471678], ["ABUSED > -0.47", 0.008790957265089099], ["-0.91 < DEPRI <= 1.10", 0.008704435684676699], ["SUICIDE <= -0.31", -0.008535922428608567], ["LOST <= -0.59", -0.008184420789392115], ["CHEAT <= -0.51", -0.008106579846102852], ["CONFLICT <= -0.58", -0.007823480046176784], ["-1.26 < ANXI <= 0.79", 0.007489400235032185], ["INSOM > -0.53", 0.006571640466205957]], 1, exp_div);
+                exp.show([["ABUSED <= -0.47", -0.00938956058574913], ["-0.58 < INFER <= 1.71", 0.009180502695183005], ["SUICIDE <= -0.31", -0.008879443392834724], ["DEPRI <= -0.91", -0.008870597374454324], ["CHEAT <= -0.51", -0.008838033096158259], ["LOST <= -0.59", -0.00880066757851938], ["POSSAT <= -1.00", 0.008756142676070605], ["CONFLICT > 0.56", 0.008589690592579967], ["THREAT <= -0.42", -0.007167749934877884], ["INSOM > -0.53", 0.007024757196258409]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["INFER", "1.71", 0.008896416084846544], ["POSSAT", "-1.00", 0.008834554193471678], ["ABUSED", "2.11", 0.008790957265089099], ["DEPRI", "1.10", 0.008704435684676699], ["SUICIDE", "-0.31", -0.008535922428608567], ["LOST", "-0.59", -0.008184420789392115], ["CHEAT", "-0.51", -0.008106579846102852], ["CONFLICT", "-0.58", -0.007823480046176784], ["ANXI", "0.79", 0.007489400235032185], ["INSOM", "1.89", 0.006571640466205957]], 1, raw_div);
+            exp.show_raw_tabular([["ABUSED", "-0.47", -0.00938956058574913], ["INFER", "1.71", 0.009180502695183005], ["SUICIDE", "-0.31", -0.008879443392834724], ["DEPRI", "-0.91", -0.008870597374454324], ["CHEAT", "-0.51", -0.008838033096158259], ["LOST", "-0.59", -0.00880066757851938], ["POSSAT", "-1.00", 0.008756142676070605], ["CONFLICT", "1.71", 0.008589690592579967], ["THREAT", "-0.42", -0.007167749934877884], ["INSOM", "1.89", 0.007024757196258409]], 1, raw_div);
         
         </script>
         </body></html>
